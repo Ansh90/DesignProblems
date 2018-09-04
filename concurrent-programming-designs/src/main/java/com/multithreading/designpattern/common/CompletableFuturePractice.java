@@ -122,7 +122,7 @@ public class CompletableFuturePractice {
     executorService.shutdown();
   }
 
-  class MyThread extends Thread {
+  static class MyThread extends Thread {
     @Override
     public void run() {
       System.out.println("I am My Thread running on " + Thread.currentThread().getName());

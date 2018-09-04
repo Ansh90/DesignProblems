@@ -28,6 +28,10 @@ import java.util.Iterator;
  * MyclollectionUser
  */
 public class MyCollectionUser {
+  /**
+   *
+   * @param args none
+   */
   public static void main(String[] args) {
     MyCollection<Integer> collection = new MyCollection<>(10);
 

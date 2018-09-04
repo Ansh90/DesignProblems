@@ -22,7 +22,13 @@
  */
 package com.design.samples.deadlock.com.design.samples.deadlock.e2;
 
-public class DeadLockEntryPoint_E2 {
+/**
+ *
+ */
+public class DeadLockEntryPointE2 {
+  /**
+   * @param args none
+   */
   public static void main(String[] args) {
     // creating one object
     Shared s1 = new Shared();

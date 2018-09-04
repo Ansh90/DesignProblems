@@ -24,24 +24,27 @@ package com.comparator_comparable;
 
 import java.util.Comparator;
 
+/**
+ *
+ */
 public class Employee implements Comparable<Employee> {
 
   /**
    * Implementing comaparators
    */
-  public static final Comparator<Employee> idComparator = new Comparator<Employee>() {
+  public static final Comparator<Employee> ID_COMPARATOR = new Comparator<Employee>() {
     @Override
     public int compare(Employee o1, Employee o2) {
       return o1.getId() - o2.getId();
     }
   };
-  public static final Comparator<Employee> salaryComparator = new Comparator<Employee>() {
+  public static final Comparator<Employee> SALARY_COMPARATOR = new Comparator<Employee>() {
     @Override
     public int compare(Employee o1, Employee o2) {
       return o1.getSalary() - o2.getSalary();
     }
   };
-  public static final Comparator<Employee> ageComparator = new Comparator<Employee>() {
+  public static final Comparator<Employee> AGE_COMPARATOR = new Comparator<Employee>() {
     @Override
     public int compare(Employee o1, Employee o2) {
       return o1.getAge() - o2.getAge();
@@ -52,6 +55,12 @@ public class Employee implements Comparable<Employee> {
   private int age;
   private int salary;
 
+  /**
+   * @param id     id
+   * @param name   name
+   * @param age    age
+   * @param salary salary
+   */
   public Employee(int id, String name, int age, int salary) {
     this.id = id;
     this.name = name;
@@ -86,8 +95,8 @@ public class Employee implements Comparable<Employee> {
   @Override
   //this is required to print the user friendly information about the Employee
   public String toString() {
-    return "[id=" + this.id + ", name=" + this.name + ", age=" + this.age + ", salary=" +
-        this.salary + "]";
+    return "[id=" + this.id + ", name=" + this.name + ", age=" + this.age + ", salary="
+        + this.salary + "]";
   }
 
 }

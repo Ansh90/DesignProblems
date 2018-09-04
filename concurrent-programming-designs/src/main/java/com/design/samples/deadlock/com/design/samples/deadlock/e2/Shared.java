@@ -22,10 +22,16 @@
  */
 package com.design.samples.deadlock.com.design.samples.deadlock.e2;
 
-// This class is shared by both threads
-public class Shared {
-  // first synchronized method
-  public synchronized void test1(Shared s2) {
+/**
+ * This class is shared by both threads
+ */
+class Shared {
+  /**
+   * first synchronized method
+   *
+   * @param s2 shared object
+   */
+  synchronized void test1(Shared s2) {
     System.out.println("test1-begin");
     Util.sleep(100);
 
@@ -35,8 +41,12 @@ public class Shared {
     System.out.println("test1-end");
   }
 
-  // second synchronized method
-  public synchronized void test2(Shared s1) {
+  /**
+   * second synchronized method
+   *
+   * @param s1 shared object
+   */
+  synchronized void test2(Shared s1) {
     System.out.println("test2-begin");
     Util.sleep(100);
 

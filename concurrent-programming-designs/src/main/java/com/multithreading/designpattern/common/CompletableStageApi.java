@@ -86,7 +86,7 @@ public class CompletableStageApi {
    * @param args no
    */
   public static void main(String[] args) {
-    Supplier<String> supplier = () -> {
+    /*Supplier<String> supplier = () -> {
       String resultStr = " From Supplier " + Thread.currentThread().getName();
       System.out.println(resultStr);
       return resultStr;
@@ -99,7 +99,7 @@ public class CompletableStageApi {
           l.add("2");
           l.add("3");
           return l;
-        }, Executors.newFixedThreadPool(4));
+        }, Executors.newFixedThreadPool(4));*/
 
 
   }

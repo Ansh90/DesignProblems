@@ -22,9 +22,11 @@
  */
 package com.design.samples.deadlock.com.design.samples.deadlock.e2;
 
-// Java program to illustrate Deadlock
-// in multithreading.
-public class Util {
+/**
+ * Java program to illustrate Deadlock
+ * in multithreading.
+ */
+class Util {
   // Util class to sleep a thread
   static void sleep(long millis) {
     try {
