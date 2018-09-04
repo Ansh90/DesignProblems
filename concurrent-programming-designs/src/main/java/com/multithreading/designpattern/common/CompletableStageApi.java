@@ -20,8 +20,8 @@
  * OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN
  * THE SOFTWARE.
  */
-package com.multithreading.designpattern.common;
 
+package com.multithreading.designpattern.common;
 
 import java.util.ArrayList;
 import java.util.List;
@@ -37,7 +37,7 @@ import java.util.function.Supplier;
  * CompletionStage helps to chain multiple tasks which should run
  * one after another.
  */
-public class CompletableStageAPI {
+public class CompletableStageApi {
 
 
   /**
@@ -83,7 +83,7 @@ public class CompletableStageAPI {
    * checked exception where as join() throws unchecked
    * exception.
    *
-   * @param args
+   * @param args no
    */
   public static void main(String[] args) {
     Supplier<String> supplier = () -> {
@@ -94,10 +94,10 @@ public class CompletableStageAPI {
 
     CompletableFuture<List<String>> stringCompletableFuture = CompletableFuture.supplyAsync(
         () -> {
-          List l = new ArrayList<>();
-          l.add(1L);
-          l.add(2L);
-          l.add(3L);
+          List<String> l = new ArrayList<>();
+          l.add("1");
+          l.add("2");
+          l.add("3");
           return l;
         }, Executors.newFixedThreadPool(4));
 
@@ -105,9 +105,7 @@ public class CompletableStageAPI {
   }
 
   private static void usageOfCompletableFuture() {
-    Runnable runnable = () -> {
-      System.out.println("From runnable task " + Thread.currentThread().getName());
-    };
+    Runnable runnable = () -> System.out.println("From runnable task " + Thread.currentThread().getName());
 
 
     ExecutorService executorService = Executors.newFixedThreadPool(5);
