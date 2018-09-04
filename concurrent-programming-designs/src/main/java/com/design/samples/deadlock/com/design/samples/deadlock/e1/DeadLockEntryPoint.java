@@ -22,8 +22,14 @@
  */
 package com.design.samples.deadlock.com.design.samples.deadlock.e1;
 
+/**
+ *
+ */
 public class DeadLockEntryPoint {
 
+  /**
+   * @param args none
+   */
   public static void main(String[] args) {
     DeadLockThreadImplementation deadLockEntryPoint = new DeadLockThreadImplementation();
     Thread thread = new Thread(deadLockEntryPoint);
