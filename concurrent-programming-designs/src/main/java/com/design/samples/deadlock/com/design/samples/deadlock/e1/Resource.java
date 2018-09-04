@@ -22,6 +22,9 @@
  */
 package com.design.samples.deadlock.com.design.samples.deadlock.e1;
 
+/**
+ * Resource
+ */
 public interface Resource {
 
   // void updateCurrentFromResource(Resource resource);

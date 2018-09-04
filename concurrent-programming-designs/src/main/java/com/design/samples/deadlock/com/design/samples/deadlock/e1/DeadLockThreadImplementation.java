@@ -22,6 +22,9 @@
  */
 package com.design.samples.deadlock.com.design.samples.deadlock.e1;
 
+/**
+ *
+ */
 public class DeadLockThreadImplementation implements Runnable {
   /**
    * Demonstration of deadlock
@@ -42,6 +45,9 @@ public class DeadLockThreadImplementation implements Runnable {
     resourceBObject.updateCurrentFromResource(resourceAObject);
   }
 
+  /**
+   *
+   */
   public void directMethod() {
     DeadLockThreadImplementation deadLockEntryPoint = new DeadLockThreadImplementation();
     Thread thread = new Thread(deadLockEntryPoint);

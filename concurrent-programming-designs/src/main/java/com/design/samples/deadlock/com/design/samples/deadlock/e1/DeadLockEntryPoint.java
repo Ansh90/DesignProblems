@@ -23,7 +23,7 @@
 package com.design.samples.deadlock.com.design.samples.deadlock.e1;
 
 /**
- *
+ * DeadLockEntryPoint
  */
 public class DeadLockEntryPoint {
 

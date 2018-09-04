@@ -22,6 +22,9 @@
  */
 package com.design.samples.deadlock.com.design.samples.deadlock.e1;
 
+/**
+ *
+ */
 public class ResourceBObject implements Resource {
 
   ResourceAObject resource = null;
@@ -30,7 +33,7 @@ public class ResourceBObject implements Resource {
    * When this synchronized method is called com.design.samples.deadlock.com.design.samples.deadlock.e1.ResourceAObject
    * will be locked by calling thread.
    *
-   * @param resource
+   * @param resource expects resource on which current thread can obtain lock.
    */
   public synchronized void updateCurrentFromResource(ResourceAObject resource) {
 
@@ -47,6 +50,9 @@ public class ResourceBObject implements Resource {
     this.resource.getString();
   }
 
+  /**
+   * @return toString of object
+   */
   public synchronized String getString() {
     String toString = "From Resource B Object";
 
