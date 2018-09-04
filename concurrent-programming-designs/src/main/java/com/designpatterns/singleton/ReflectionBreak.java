@@ -25,9 +25,20 @@ package com.designpatterns.singleton;
 import java.lang.reflect.Constructor;
 import java.lang.reflect.InvocationTargetException;
 
+/**
+ * ReflectionBreak
+ */
 public class ReflectionBreak {
 
-  public static void main(String[] input) throws IllegalAccessException, InvocationTargetException, InstantiationException {
+  /**
+   *
+   * @param input none
+   * @throws IllegalAccessException e
+   * @throws InvocationTargetException e
+   * @throws InstantiationException  e
+   */
+  public static void main(String[] input) throws IllegalAccessException, InvocationTargetException,
+      InstantiationException {
     LazyInitializationSingleton instanceOne = LazyInitializationSingleton.getInstance();
     LazyInitializationSingleton instanceTwo = null;
 

@@ -24,7 +24,16 @@ package com.serialization.singleton;
 
 import java.io.*;
 
+/**
+ * TestSerialization
+ */
 public class TestSerialization {
+  /**
+   * Entry Point
+   * @param args none
+   * @throws IOException e
+   * @throws ClassNotFoundException e
+   */
   public static void main(String[] args) throws IOException, ClassNotFoundException {
 
     SerializationWithSingleton serializationWithSingleton = SerializationWithSingleton.getInstance();

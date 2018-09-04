@@ -22,8 +22,12 @@
  */
 package com.designpatterns.singleton;
 
+/**
+ * LazyInitializationSingleton
+ */
 public final class LazyInitializationSingleton {
-  private static LazyInitializationSingleton LAZY_INITIALIZATION_SINGLETON;
+
+  private static LazyInitializationSingleton lazyInitializationSingleton;
 
   private LazyInitializationSingleton() {
   }
@@ -34,13 +38,13 @@ public final class LazyInitializationSingleton {
    * @return
    */
   public static LazyInitializationSingleton getInstance() {
-    if (LAZY_INITIALIZATION_SINGLETON == null) {
+    if (lazyInitializationSingleton == null) {
       synchronized (LazyInitializationSingleton.class) {
-        if (LAZY_INITIALIZATION_SINGLETON == null) {
-          LAZY_INITIALIZATION_SINGLETON = new LazyInitializationSingleton();
+        if (lazyInitializationSingleton == null) {
+          lazyInitializationSingleton = new LazyInitializationSingleton();
         }
       }
     }
-    return LAZY_INITIALIZATION_SINGLETON;
+    return lazyInitializationSingleton;
   }
 }

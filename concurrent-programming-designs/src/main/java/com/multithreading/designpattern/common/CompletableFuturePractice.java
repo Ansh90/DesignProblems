@@ -36,7 +36,7 @@ public class CompletableFuturePractice {
    */
   public static void main(String[] args) {
 
-    MyThread myThread = new CompletableFuturePractice().new MyThread();
+    MyThread myThread = new CompletableFuturePractice.MyThread();
     myThread.setPriority(10);
     myThread.start();
 

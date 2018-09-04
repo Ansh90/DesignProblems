@@ -28,8 +28,16 @@ package com.lambda.expressions;
 import java.util.Arrays;
 import java.util.List;
 
+/**
+ * EntryPoint
+ *
+ */
 public class Test {
-  public static void main(String args[]) {
+  /**
+   *
+   * @param args none
+   */
+  public static void main(String[] args) {
 
     // create a list of strings
     List<String> names =

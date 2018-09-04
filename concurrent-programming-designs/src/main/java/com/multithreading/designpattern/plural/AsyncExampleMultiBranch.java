@@ -70,11 +70,7 @@ public class AsyncExampleMultiBranch {
       return CompletableFuture.supplyAsync(userSupplier);
     };
 
-    /**
-     * Consumer<List<User>> displayer = users -> users.forEach(System.out::println);
-     */
-
-
+     //Consumer<List<User>> displayer = users -> users.forEach(System.out::println);
 
     CompletableFuture<List<Long>> completableFuture = CompletableFuture.supplyAsync(supplyIDs);
 

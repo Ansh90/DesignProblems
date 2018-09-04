@@ -22,6 +22,9 @@
  */
 package com.designpatterns.singleton;
 
+/**
+ *
+ */
 public final class InnerClassSingleton {
 
   private InnerClassSingleton() {

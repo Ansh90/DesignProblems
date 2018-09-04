@@ -22,6 +22,9 @@
  */
 package com.designpatterns.singleton;
 
+/**
+ * EarlyInitializationSingleton
+ */
 public final class EarlyInitializationSingleton {
   private static final EarlyInitializationSingleton EARLY_INITIALIZATION_SINGLETON = new EarlyInitializationSingleton();
 

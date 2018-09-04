@@ -22,6 +22,9 @@
  */
 package com.multithreading.designpattern.plural.model;
 
+/**
+ * User POJO
+ */
 public class User {
 
   private long id;

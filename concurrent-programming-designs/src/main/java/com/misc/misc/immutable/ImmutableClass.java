@@ -24,12 +24,21 @@ package com.misc.misc.immutable;
 
 import java.util.Date;
 
+/**
+ *
+ */
 public final class ImmutableClass {
 
   private final String name;
   private final int val;
   private final Date sysDate;
 
+  /**
+   *
+   * @param name name
+   * @param val val
+   * @param sysDate sysDate
+   */
   public ImmutableClass(String name, int val, Date sysDate) {
     this.name = name;
     this.val = val;

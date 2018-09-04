@@ -22,6 +22,9 @@
  */
 package com.multithreading.designpattern.plural.model;
 
+/**
+ * Email
+ */
 public class Email {
 
   private long id;

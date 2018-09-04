@@ -34,7 +34,7 @@ package com.multithreading.designpattern.common;
  *
  * @Author Anshul Mohil
  */
-public class ExecutorAPI {
+public class ExecutorApi {
 
 
   public static void main(String[] args) {

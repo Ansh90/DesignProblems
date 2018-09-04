@@ -24,13 +24,16 @@ package com.comparator_comparable;
 
 import java.util.Arrays;
 
+/**
+ * JavaObjectSorting
+ */
 public class JavaObjectSorting {
 
   /**
    * This class shows how to sort custom objects array/list
    * implementing Comparable and Comparator interfaces
    *
-   * @param args
+   * @param args none
    */
   public static void main(String[] args) {
 
@@ -46,15 +49,15 @@ public class JavaObjectSorting {
     System.out.println("Default Sorting of Employees list:\n" + Arrays.toString(empArr));
 
     //sort employees array using Comparator by Salary
-    Arrays.sort(empArr, Employee.salaryComparator);
+    Arrays.sort(empArr, Employee.SALARY_COMPARATOR);
     System.out.println("Employees list sorted by Salary:\n" + Arrays.toString(empArr));
 
     //sort employees array using Comparator by Age
-    Arrays.sort(empArr, Employee.ageComparator);
+    Arrays.sort(empArr, Employee.AGE_COMPARATOR);
     System.out.println("Employees list sorted by Age:\n" + Arrays.toString(empArr));
 
     //sort employees array using Comparator by Name
-    Arrays.sort(empArr, Employee.idComparator);
+    Arrays.sort(empArr, Employee.ID_COMPARATOR);
     System.out.println("Employees list sorted by ID:\n" + Arrays.toString(empArr));
   }
 

@@ -22,18 +22,21 @@
  */
 package com.lambda.expressions;
 
-
+/**
+ * Its a functional interface which
+ * takes an input and returns boolean.
+ * @param <T> input of Type T
+ */
 @FunctionalInterface
 public interface MyFunctionalInteface<T> {
 
   /**
    * Lambda expression will be used to provide
    * implementation of this interface.
-   * <p>
-   * This interface is to copy Predicate<T> interface..
+   * This interface is to copy Predicate interface..
    *
-   * @param s
-   * @return
+   * @param s input
+   * @return boolean
    */
   boolean test(T s);
 }

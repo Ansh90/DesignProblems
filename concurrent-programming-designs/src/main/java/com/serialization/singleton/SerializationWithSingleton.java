@@ -24,6 +24,9 @@ package com.serialization.singleton;
 
 import java.io.Serializable;
 
+/**
+ * SerializationWithSingleton
+ */
 public class SerializationWithSingleton implements Serializable {
 
   public static final long serialVersionUID = -8784787384874983477L;
@@ -33,6 +36,10 @@ public class SerializationWithSingleton implements Serializable {
   private SerializationWithSingleton() {
   }
 
+  /**
+   *
+   * @return serializationWithSingleton instance
+   */
   public static final SerializationWithSingleton getInstance() {
     if (serializationWithSingleton == null) {
       synchronized (SerializationWithSingleton.class) {

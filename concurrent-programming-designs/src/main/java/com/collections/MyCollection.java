@@ -43,12 +43,21 @@ public class MyCollection<T> implements Iterable<T> {
     return nElem;
   }
 
+  /**
+   *
+   * @param val value to add in collection
+   */
   public void add(T val) {
     synchronized (this) {
       this.object[nElem++] = val;
     }
   }
 
+  /**
+   *
+   * @param val value to remove
+   * @return value which it removed as null.
+   */
   public T remove(T val) {
     for (int i = 0; i < size(); i++) {
       if (val.equals(object[i])) {
