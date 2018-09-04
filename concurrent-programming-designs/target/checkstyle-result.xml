@@ -1,0 +1,139 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<checkstyle version="6.11.2">
+<file name="/Users/anshulmohil/Documents/area51/codebase/checkouts/DesignProblems/concurrent-programming-designs/src/main/java/com/collections/MyCollection.java">
+<error line="46" column="3" severity="error" message="Missing a Javadoc comment." source="com.puppycrawl.tools.checkstyle.checks.javadoc.JavadocMethodCheck"/>
+<error line="52" column="3" severity="error" message="Missing a Javadoc comment." source="com.puppycrawl.tools.checkstyle.checks.javadoc.JavadocMethodCheck"/>
+</file>
+<file name="/Users/anshulmohil/Documents/area51/codebase/checkouts/DesignProblems/concurrent-programming-designs/src/main/java/com/collections/MyCollectionUser.java">
+<error line="27" severity="error" message="Missing a Javadoc comment." source="com.puppycrawl.tools.checkstyle.checks.javadoc.JavadocTypeCheck"/>
+<error line="28" column="3" severity="error" message="Missing a Javadoc comment." source="com.puppycrawl.tools.checkstyle.checks.javadoc.JavadocMethodCheck"/>
+</file>
+<file name="/Users/anshulmohil/Documents/area51/codebase/checkouts/DesignProblems/concurrent-programming-designs/src/main/java/com/comparator_comparable/Employee.java">
+<error line="27" severity="error" message="Missing a Javadoc comment." source="com.puppycrawl.tools.checkstyle.checks.javadoc.JavadocTypeCheck"/>
+<error line="32" column="44" severity="error" message="Name &apos;idComparator&apos; must match pattern &apos;^[A-Z][A-Z0-9]*(_[A-Z0-9]+)*$&apos;." source="com.puppycrawl.tools.checkstyle.checks.naming.ConstantNameCheck"/>
+<error line="38" column="44" severity="error" message="Name &apos;salaryComparator&apos; must match pattern &apos;^[A-Z][A-Z0-9]*(_[A-Z0-9]+)*$&apos;." source="com.puppycrawl.tools.checkstyle.checks.naming.ConstantNameCheck"/>
+<error line="44" column="44" severity="error" message="Name &apos;ageComparator&apos; must match pattern &apos;^[A-Z][A-Z0-9]*(_[A-Z0-9]+)*$&apos;." source="com.puppycrawl.tools.checkstyle.checks.naming.ConstantNameCheck"/>
+<error line="55" column="3" severity="error" message="Missing a Javadoc comment." source="com.puppycrawl.tools.checkstyle.checks.javadoc.JavadocMethodCheck"/>
+<error line="89" column="89" severity="error" message="&apos;+&apos; should be on a new line." source="com.puppycrawl.tools.checkstyle.checks.whitespace.OperatorWrapCheck"/>
+</file>
+<file name="/Users/anshulmohil/Documents/area51/codebase/checkouts/DesignProblems/concurrent-programming-designs/src/main/java/com/comparator_comparable/JavaObjectSorting.java">
+<error line="27" severity="error" message="Missing a Javadoc comment." source="com.puppycrawl.tools.checkstyle.checks.javadoc.JavadocTypeCheck"/>
+<error line="33" severity="error" message="At-clause should have a non-empty description." source="com.puppycrawl.tools.checkstyle.checks.javadoc.NonEmptyAtclauseDescriptionCheck"/>
+</file>
+<file name="/Users/anshulmohil/Documents/area51/codebase/checkouts/DesignProblems/concurrent-programming-designs/src/main/java/com/design/samples/deadlock/com/design/samples/deadlock/e1/DeadLockEntryPoint.java">
+<error line="25" severity="error" message="Missing a Javadoc comment." source="com.puppycrawl.tools.checkstyle.checks.javadoc.JavadocTypeCheck"/>
+<error line="27" column="3" severity="error" message="Missing a Javadoc comment." source="com.puppycrawl.tools.checkstyle.checks.javadoc.JavadocMethodCheck"/>
+</file>
+<file name="/Users/anshulmohil/Documents/area51/codebase/checkouts/DesignProblems/concurrent-programming-designs/src/main/java/com/design/samples/deadlock/com/design/samples/deadlock/e1/DeadLockThreadImplementation.java">
+<error line="25" severity="error" message="Missing a Javadoc comment." source="com.puppycrawl.tools.checkstyle.checks.javadoc.JavadocTypeCheck"/>
+<error line="45" column="3" severity="error" message="Missing a Javadoc comment." source="com.puppycrawl.tools.checkstyle.checks.javadoc.JavadocMethodCheck"/>
+</file>
+<file name="/Users/anshulmohil/Documents/area51/codebase/checkouts/DesignProblems/concurrent-programming-designs/src/main/java/com/design/samples/deadlock/com/design/samples/deadlock/e1/Resource.java">
+<error line="25" severity="error" message="Missing a Javadoc comment." source="com.puppycrawl.tools.checkstyle.checks.javadoc.JavadocTypeCheck"/>
+</file>
+<file name="/Users/anshulmohil/Documents/area51/codebase/checkouts/DesignProblems/concurrent-programming-designs/src/main/java/com/design/samples/deadlock/com/design/samples/deadlock/e1/ResourceAObject.java">
+<error line="25" severity="error" message="Missing a Javadoc comment." source="com.puppycrawl.tools.checkstyle.checks.javadoc.JavadocTypeCheck"/>
+<error line="33" severity="error" message="At-clause should have a non-empty description." source="com.puppycrawl.tools.checkstyle.checks.javadoc.NonEmptyAtclauseDescriptionCheck"/>
+<error line="50" column="3" severity="error" message="Missing a Javadoc comment." source="com.puppycrawl.tools.checkstyle.checks.javadoc.JavadocMethodCheck"/>
+</file>
+<file name="/Users/anshulmohil/Documents/area51/codebase/checkouts/DesignProblems/concurrent-programming-designs/src/main/java/com/design/samples/deadlock/com/design/samples/deadlock/e1/ResourceBObject.java">
+<error line="25" severity="error" message="Missing a Javadoc comment." source="com.puppycrawl.tools.checkstyle.checks.javadoc.JavadocTypeCheck"/>
+<error line="33" severity="error" message="At-clause should have a non-empty description." source="com.puppycrawl.tools.checkstyle.checks.javadoc.NonEmptyAtclauseDescriptionCheck"/>
+<error line="50" column="3" severity="error" message="Missing a Javadoc comment." source="com.puppycrawl.tools.checkstyle.checks.javadoc.JavadocMethodCheck"/>
+</file>
+<file name="/Users/anshulmohil/Documents/area51/codebase/checkouts/DesignProblems/concurrent-programming-designs/src/main/java/com/design/samples/deadlock/com/design/samples/deadlock/e2/DeadLockEntryPoint_E2.java">
+<error line="25" severity="error" message="Missing a Javadoc comment." source="com.puppycrawl.tools.checkstyle.checks.javadoc.JavadocTypeCheck"/>
+<error line="25" column="14" severity="error" message="Name &apos;DeadLockEntryPoint_E2&apos; must match pattern &apos;^[A-Z][a-zA-Z0-9]*$&apos;." source="com.puppycrawl.tools.checkstyle.checks.naming.TypeNameCheck"/>
+<error line="26" column="3" severity="error" message="Missing a Javadoc comment." source="com.puppycrawl.tools.checkstyle.checks.javadoc.JavadocMethodCheck"/>
+</file>
+<file name="/Users/anshulmohil/Documents/area51/codebase/checkouts/DesignProblems/concurrent-programming-designs/src/main/java/com/design/samples/deadlock/com/design/samples/deadlock/e2/Shared.java">
+<error line="26" severity="error" message="Missing a Javadoc comment." source="com.puppycrawl.tools.checkstyle.checks.javadoc.JavadocTypeCheck"/>
+<error line="28" column="3" severity="error" message="Missing a Javadoc comment." source="com.puppycrawl.tools.checkstyle.checks.javadoc.JavadocMethodCheck"/>
+<error line="39" column="3" severity="error" message="Missing a Javadoc comment." source="com.puppycrawl.tools.checkstyle.checks.javadoc.JavadocMethodCheck"/>
+</file>
+<file name="/Users/anshulmohil/Documents/area51/codebase/checkouts/DesignProblems/concurrent-programming-designs/src/main/java/com/design/samples/deadlock/com/design/samples/deadlock/e2/Thread1.java">
+<error line="25" severity="error" message="Missing a Javadoc comment." source="com.puppycrawl.tools.checkstyle.checks.javadoc.JavadocTypeCheck"/>
+</file>
+<file name="/Users/anshulmohil/Documents/area51/codebase/checkouts/DesignProblems/concurrent-programming-designs/src/main/java/com/design/samples/deadlock/com/design/samples/deadlock/e2/Thread2.java">
+<error line="25" severity="error" message="Missing a Javadoc comment." source="com.puppycrawl.tools.checkstyle.checks.javadoc.JavadocTypeCheck"/>
+</file>
+<file name="/Users/anshulmohil/Documents/area51/codebase/checkouts/DesignProblems/concurrent-programming-designs/src/main/java/com/design/samples/deadlock/com/design/samples/deadlock/e2/Util.java">
+<error line="27" severity="error" message="Missing a Javadoc comment." source="com.puppycrawl.tools.checkstyle.checks.javadoc.JavadocTypeCheck"/>
+</file>
+<file name="/Users/anshulmohil/Documents/area51/codebase/checkouts/DesignProblems/concurrent-programming-designs/src/main/java/com/designpatterns/singleton/EarlyInitializationSingleton.java">
+<error line="25" severity="error" message="Missing a Javadoc comment." source="com.puppycrawl.tools.checkstyle.checks.javadoc.JavadocTypeCheck"/>
+</file>
+<file name="/Users/anshulmohil/Documents/area51/codebase/checkouts/DesignProblems/concurrent-programming-designs/src/main/java/com/designpatterns/singleton/EnumSingleton.java">
+<error line="25" severity="error" message="Missing a Javadoc comment." source="com.puppycrawl.tools.checkstyle.checks.javadoc.JavadocTypeCheck"/>
+</file>
+<file name="/Users/anshulmohil/Documents/area51/codebase/checkouts/DesignProblems/concurrent-programming-designs/src/main/java/com/designpatterns/singleton/InnerClassSingleton.java">
+<error line="25" severity="error" message="Missing a Javadoc comment." source="com.puppycrawl.tools.checkstyle.checks.javadoc.JavadocTypeCheck"/>
+</file>
+<file name="/Users/anshulmohil/Documents/area51/codebase/checkouts/DesignProblems/concurrent-programming-designs/src/main/java/com/designpatterns/singleton/LazyInitializationSingleton.java">
+<error line="25" severity="error" message="Missing a Javadoc comment." source="com.puppycrawl.tools.checkstyle.checks.javadoc.JavadocTypeCheck"/>
+<error line="26" column="46" severity="error" message="Name &apos;LAZY_INITIALIZATION_SINGLETON&apos; must match pattern &apos;^[a-z][a-zA-Z0-9]*$&apos;." source="com.puppycrawl.tools.checkstyle.checks.naming.StaticVariableNameCheck"/>
+<error line="34" severity="error" message="At-clause should have a non-empty description." source="com.puppycrawl.tools.checkstyle.checks.javadoc.NonEmptyAtclauseDescriptionCheck"/>
+</file>
+<file name="/Users/anshulmohil/Documents/area51/codebase/checkouts/DesignProblems/concurrent-programming-designs/src/main/java/com/designpatterns/singleton/ReflectionBreak.java">
+<error line="28" severity="error" message="Missing a Javadoc comment." source="com.puppycrawl.tools.checkstyle.checks.javadoc.JavadocTypeCheck"/>
+<error line="30" severity="error" message="Line is longer than 120 characters (found 124)." source="com.puppycrawl.tools.checkstyle.checks.sizes.LineLengthCheck"/>
+<error line="30" column="3" severity="error" message="Missing a Javadoc comment." source="com.puppycrawl.tools.checkstyle.checks.javadoc.JavadocMethodCheck"/>
+</file>
+<file name="/Users/anshulmohil/Documents/area51/codebase/checkouts/DesignProblems/concurrent-programming-designs/src/main/java/com/designpatterns/singleton/TestingClass.java">
+<error line="25" severity="error" message="Missing a Javadoc comment." source="com.puppycrawl.tools.checkstyle.checks.javadoc.JavadocTypeCheck"/>
+</file>
+<file name="/Users/anshulmohil/Documents/area51/codebase/checkouts/DesignProblems/concurrent-programming-designs/src/main/java/com/lambda/expressions/MyFunctionalInteface.java">
+<error line="26" severity="error" message="Missing a Javadoc comment." source="com.puppycrawl.tools.checkstyle.checks.javadoc.JavadocTypeCheck"/>
+<error line="33" severity="error" message="Javadoc comment at column 41 has parse error. Missed HTML close tag &apos;T&apos;. Sometimes it means that close tag missed for one of previous tags." source="com.puppycrawl.tools.checkstyle.checks.javadoc.JavadocTagContinuationIndentationCheck"/>
+</file>
+<file name="/Users/anshulmohil/Documents/area51/codebase/checkouts/DesignProblems/concurrent-programming-designs/src/main/java/com/lambda/expressions/Test.java">
+<error line="31" severity="error" message="Missing a Javadoc comment." source="com.puppycrawl.tools.checkstyle.checks.javadoc.JavadocTypeCheck"/>
+<error line="32" column="3" severity="error" message="Missing a Javadoc comment." source="com.puppycrawl.tools.checkstyle.checks.javadoc.JavadocMethodCheck"/>
+<error line="32" column="38" severity="error" message="Array brackets at illegal position." source="com.puppycrawl.tools.checkstyle.checks.ArrayTypeStyleCheck"/>
+</file>
+<file name="/Users/anshulmohil/Documents/area51/codebase/checkouts/DesignProblems/concurrent-programming-designs/src/main/java/com/misc/misc/immutable/ImmutableClass.java">
+<error line="27" severity="error" message="Missing a Javadoc comment." source="com.puppycrawl.tools.checkstyle.checks.javadoc.JavadocTypeCheck"/>
+<error line="33" column="3" severity="error" message="Missing a Javadoc comment." source="com.puppycrawl.tools.checkstyle.checks.javadoc.JavadocMethodCheck"/>
+</file>
+<file name="/Users/anshulmohil/Documents/area51/codebase/checkouts/DesignProblems/concurrent-programming-designs/src/main/java/com/multithreading/designpattern/common/CompletableFuturePractice.java">
+<error line="29" severity="error" message="Missing a Javadoc comment." source="com.puppycrawl.tools.checkstyle.checks.javadoc.JavadocTypeCheck"/>
+<error line="31" column="3" severity="error" message="Missing a Javadoc comment." source="com.puppycrawl.tools.checkstyle.checks.javadoc.JavadocMethodCheck"/>
+</file>
+<file name="/Users/anshulmohil/Documents/area51/codebase/checkouts/DesignProblems/concurrent-programming-designs/src/main/java/com/multithreading/designpattern/common/CompletableStageAPI.java">
+<error line="40" severity="error" message="Abbreviation in name must contain no more than &apos;1&apos; capital letters." source="com.puppycrawl.tools.checkstyle.checks.naming.AbbreviationAsWordInNameCheck"/>
+<error line="86" severity="error" message="At-clause should have a non-empty description." source="com.puppycrawl.tools.checkstyle.checks.javadoc.NonEmptyAtclauseDescriptionCheck"/>
+</file>
+<file name="/Users/anshulmohil/Documents/area51/codebase/checkouts/DesignProblems/concurrent-programming-designs/src/main/java/com/multithreading/designpattern/common/ExecutorAPI.java">
+<error line="37" severity="error" message="Abbreviation in name must contain no more than &apos;1&apos; capital letters." source="com.puppycrawl.tools.checkstyle.checks.naming.AbbreviationAsWordInNameCheck"/>
+</file>
+<file name="/Users/anshulmohil/Documents/area51/codebase/checkouts/DesignProblems/concurrent-programming-designs/src/main/java/com/multithreading/designpattern/plural/AsyncExample.java">
+<error line="37" severity="error" message="Missing a Javadoc comment." source="com.puppycrawl.tools.checkstyle.checks.javadoc.JavadocTypeCheck"/>
+<error line="39" column="3" severity="error" message="Missing a Javadoc comment." source="com.puppycrawl.tools.checkstyle.checks.javadoc.JavadocMethodCheck"/>
+<error line="79" column="38" severity="error" message="Empty catch block." source="com.puppycrawl.tools.checkstyle.checks.blocks.EmptyBlockCheck"/>
+</file>
+<file name="/Users/anshulmohil/Documents/area51/codebase/checkouts/DesignProblems/concurrent-programming-designs/src/main/java/com/multithreading/designpattern/plural/AsyncExampleMultiBranch.java">
+<error line="38" severity="error" message="Missing a Javadoc comment." source="com.puppycrawl.tools.checkstyle.checks.javadoc.JavadocTypeCheck"/>
+<error line="40" column="3" severity="error" message="Missing a Javadoc comment." source="com.puppycrawl.tools.checkstyle.checks.javadoc.JavadocMethodCheck"/>
+<error line="96" column="38" severity="error" message="Empty catch block." source="com.puppycrawl.tools.checkstyle.checks.blocks.EmptyBlockCheck"/>
+</file>
+<file name="/Users/anshulmohil/Documents/area51/codebase/checkouts/DesignProblems/concurrent-programming-designs/src/main/java/com/multithreading/designpattern/plural/AsyncExampleMultiBranchEither.java">
+<error line="37" severity="error" message="Missing a Javadoc comment." source="com.puppycrawl.tools.checkstyle.checks.javadoc.JavadocTypeCheck"/>
+<error line="39" column="3" severity="error" message="Missing a Javadoc comment." source="com.puppycrawl.tools.checkstyle.checks.javadoc.JavadocMethodCheck"/>
+<error line="48" severity="error" message="Javadoc comment at column 18 has parse error. Details: no viable alternative at input &apos;&lt;R,&apos; while parsing HTML_ELEMENT" source="com.puppycrawl.tools.checkstyle.checks.javadoc.JavadocTagContinuationIndentationCheck"/>
+<error line="96" column="38" severity="error" message="Empty catch block." source="com.puppycrawl.tools.checkstyle.checks.blocks.EmptyBlockCheck"/>
+</file>
+<file name="/Users/anshulmohil/Documents/area51/codebase/checkouts/DesignProblems/concurrent-programming-designs/src/main/java/com/multithreading/designpattern/plural/model/Email.java">
+<error line="25" severity="error" message="Missing a Javadoc comment." source="com.puppycrawl.tools.checkstyle.checks.javadoc.JavadocTypeCheck"/>
+</file>
+<file name="/Users/anshulmohil/Documents/area51/codebase/checkouts/DesignProblems/concurrent-programming-designs/src/main/java/com/multithreading/designpattern/plural/model/User.java">
+<error line="25" severity="error" message="Missing a Javadoc comment." source="com.puppycrawl.tools.checkstyle.checks.javadoc.JavadocTypeCheck"/>
+</file>
+<file name="/Users/anshulmohil/Documents/area51/codebase/checkouts/DesignProblems/concurrent-programming-designs/src/main/java/com/serialization/singleton/SerializationWithSingleton.java">
+<error line="27" severity="error" message="Missing a Javadoc comment." source="com.puppycrawl.tools.checkstyle.checks.javadoc.JavadocTypeCheck"/>
+<error line="36" column="3" severity="error" message="Missing a Javadoc comment." source="com.puppycrawl.tools.checkstyle.checks.javadoc.JavadocMethodCheck"/>
+</file>
+<file name="/Users/anshulmohil/Documents/area51/codebase/checkouts/DesignProblems/concurrent-programming-designs/src/main/java/com/serialization/singleton/TestSerialization.java">
+<error line="27" severity="error" message="Missing a Javadoc comment." source="com.puppycrawl.tools.checkstyle.checks.javadoc.JavadocTypeCheck"/>
+<error line="28" column="3" severity="error" message="Missing a Javadoc comment." source="com.puppycrawl.tools.checkstyle.checks.javadoc.JavadocMethodCheck"/>
+</file>
+</checkstyle>
