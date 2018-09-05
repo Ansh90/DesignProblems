@@ -30,20 +30,18 @@ import java.util.List;
 import java.util.concurrent.CompletableFuture;
 import java.util.concurrent.ExecutorService;
 import java.util.concurrent.Executors;
-import java.util.function.Consumer;
 import java.util.function.Function;
 import java.util.function.Supplier;
 import java.util.stream.Collectors;
 
 /**
- *
  * CompletableStage demonstration samples
- *
  */
 public class AsyncExampleMultiBranch {
 
   /**
-   *  Entry point method for AsyncExample
+   * Entry point method for AsyncExample
+   *
    * @param args not expecting any command line input
    */
   public static void main(String[] args) {
@@ -70,7 +68,7 @@ public class AsyncExampleMultiBranch {
       return CompletableFuture.supplyAsync(userSupplier);
     };
 
-     //Consumer<List<User>> displayer = users -> users.forEach(System.out::println);
+    //Consumer<List<User>> displayer = users -> users.forEach(System.out::println);
 
     CompletableFuture<List<Long>> completableFuture = CompletableFuture.supplyAsync(supplyIDs);
 

@@ -22,14 +22,11 @@
  */
 package com.collections;
 
-import java.util.Iterator;
-
 /**
  * MyclollectionUser
  */
 public class MyCollectionUser {
   /**
-   *
    * @param args none
    */
   public static void main(String[] args) {

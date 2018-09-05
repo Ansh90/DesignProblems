@@ -31,11 +31,10 @@ import java.lang.reflect.InvocationTargetException;
 public class ReflectionBreak {
 
   /**
-   *
    * @param input none
-   * @throws IllegalAccessException e
+   * @throws IllegalAccessException    e
    * @throws InvocationTargetException e
-   * @throws InstantiationException  e
+   * @throws InstantiationException    e
    */
   public static void main(String[] input) throws IllegalAccessException, InvocationTargetException,
       InstantiationException {

@@ -27,7 +27,6 @@ package com.designpatterns.singleton;
  */
 public class TestingClass {
   /**
-   *
    * @param args none
    */
   public static void main(String[] args) {

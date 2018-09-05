@@ -30,8 +30,9 @@ import java.io.*;
 public class TestSerialization {
   /**
    * Entry Point
+   *
    * @param args none
-   * @throws IOException e
+   * @throws IOException            e
    * @throws ClassNotFoundException e
    */
   public static void main(String[] args) throws IOException, ClassNotFoundException {

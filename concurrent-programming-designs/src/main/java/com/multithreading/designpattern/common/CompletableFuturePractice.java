@@ -31,7 +31,6 @@ import java.util.function.Supplier;
 public class CompletableFuturePractice {
 
   /**
-   *
    * @param args none
    */
   public static void main(String[] args) {

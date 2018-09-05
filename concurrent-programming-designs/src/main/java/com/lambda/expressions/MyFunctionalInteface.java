@@ -25,6 +25,7 @@ package com.lambda.expressions;
 /**
  * Its a functional interface which
  * takes an input and returns boolean.
+ *
  * @param <T> input of Type T
  */
 @FunctionalInterface

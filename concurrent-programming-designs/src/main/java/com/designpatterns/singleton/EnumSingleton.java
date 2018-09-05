@@ -23,7 +23,7 @@
 package com.designpatterns.singleton;
 
 /**
- * 
+ *
  */
 public enum EnumSingleton {
   INSTANCENUM_SINGLETON, ABC;

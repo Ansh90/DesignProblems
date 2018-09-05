@@ -40,7 +40,6 @@ import java.util.stream.Collectors;
 public class AsyncExample {
 
   /**
-   *
    * @param args command line arguments expected
    */
   public static void main(String[] args) {

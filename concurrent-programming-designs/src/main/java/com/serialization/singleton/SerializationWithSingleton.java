@@ -37,7 +37,6 @@ public class SerializationWithSingleton implements Serializable {
   }
 
   /**
-   *
    * @return serializationWithSingleton instance
    */
   public static final SerializationWithSingleton getInstance() {

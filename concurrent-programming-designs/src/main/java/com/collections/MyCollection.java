@@ -44,7 +44,6 @@ public class MyCollection<T> implements Iterable<T> {
   }
 
   /**
-   *
    * @param val value to add in collection
    */
   public void add(T val) {
@@ -54,7 +53,6 @@ public class MyCollection<T> implements Iterable<T> {
   }
 
   /**
-   *
    * @param val value to remove
    * @return value which it removed as null.
    */

@@ -34,9 +34,8 @@ public final class ImmutableClass {
   private final Date sysDate;
 
   /**
-   *
-   * @param name name
-   * @param val val
+   * @param name    name
+   * @param val     val
    * @param sysDate sysDate
    */
   public ImmutableClass(String name, int val, Date sysDate) {

@@ -35,7 +35,7 @@ public final class LazyInitializationSingleton {
   /**
    * Double checking machanism helps when multiple theads wait to acquire synchronized block.
    *
-   * @return
+   * @return instance
    */
   public static LazyInitializationSingleton getInstance() {
     if (lazyInitializationSingleton == null) {

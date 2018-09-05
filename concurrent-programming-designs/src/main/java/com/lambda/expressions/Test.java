@@ -30,11 +30,9 @@ import java.util.List;
 
 /**
  * EntryPoint
- *
  */
 public class Test {
   /**
-   *
    * @param args none
    */
   public static void main(String[] args) {
