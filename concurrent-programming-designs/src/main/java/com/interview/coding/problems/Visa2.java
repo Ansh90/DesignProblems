@@ -11,7 +11,7 @@ public class Visa2 {
    * @param args none
    * @throws Exception scanner related
    */
-  public static void main(String args[]) throws Exception {
+  public static void main(String[] args) throws Exception {
     Scanner sc = new Scanner(System.in);
 
     int lines = sc.nextInt();
@@ -31,15 +31,20 @@ public class Visa2 {
     sc.close();
   }
 
+  /**
+   * @param s1 string1
+   * @param s2 string2
+   * @return
+   */
   public static int countManipulations(String s1, String s2) {
     int count = 0;
-    int char_count[] = new int[26];
+    int[] charcount = new int[26];
     for (int i = 0; i < s1.length(); i++) {
-      char_count[s1.charAt(i) - 'a']++;
+      charcount[s1.charAt(i) - 'a']++;
     }
 
     for (int i = 0; i < s2.length(); i++) {
-      if (char_count[s2.charAt(i) - 'a']-- <= 0) {
+      if (charcount[s2.charAt(i) - 'a']-- <= 0) {
         count++;
       }
     }

@@ -34,9 +34,9 @@ public class Visa {
     Iterator<String> itr = abvalues.iterator();
     while (itr.hasNext()) {
       String s = itr.next();
-      String[] num_den = s.split(" ");
-      num.add(Integer.valueOf(num_den[0]));
-      den.add(Integer.valueOf(num_den[1]));
+      String[] numDen = s.split(" ");
+      num.add(Integer.valueOf(numDen[0]));
+      den.add(Integer.valueOf(numDen[1]));
     }
     if (num.size() != den.size()) {
       return "";

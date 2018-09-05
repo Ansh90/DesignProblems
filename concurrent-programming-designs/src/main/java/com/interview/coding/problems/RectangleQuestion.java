@@ -1,37 +1,36 @@
 package com.interview.coding.problems;
 
-
 /**
  * RectangleQuestion
  */
 public class RectangleQuestion {
 
   /**
-   * @param K k
-   * @param L l
-   * @param M m
-   * @param N n
-   * @param P p
-   * @param Q q
-   * @param R r
-   * @param S s
+   * @param k k
+   * @param l l
+   * @param m m
+   * @param n n
+   * @param p p
+   * @param q q
+   * @param r r
+   * @param s s
    * @return value
    */
-  public static int solution(int K, int L, int M, int N, int P, int Q, int R, int S) {
+  public static int solution(int k, int l, int m, int n, int p, int q, int r, int s) {
     // write your code in Java SE 8
 
-    int areaFirstRect = Math.abs(M - K) * Math.abs(L - N);
-    int areaSecondRect = Math.abs(R - P) * Math.abs(Q - S);
+    int areaFirstRect = Math.abs(m - k) * Math.abs(l - n);
+    int areaSecondRect = Math.abs(r - p) * Math.abs(q - s);
     int totalArea = areaFirstRect + areaSecondRect;
 
     boolean isoverlap = true;
 
-    int k = Math.max(K, P);
-    int l = Math.max(L, Q);
-    int m = Math.min(M, R);
-    int n = Math.min(N, S);
+    int k = Math.max(k, p);
+    int l = Math.max(l, q);
+    int m = Math.min(m, r);
+    int n = Math.min(n, s);
     int areaklmn = Math.abs(m - k) * Math.abs(l - n);
-    if (K > R || L > S || M < P || N < Q) {
+    if (k > r || l > s || m < p || n < q) {
       isoverlap = false;
     }
 
@@ -41,20 +40,4 @@ public class RectangleQuestion {
       return totalArea;
     }
   }
-
-//  /**
-//   *
-//   * @param A none expected
-//   */
-//	public static void main(String[] A) {
-//
-//		System.out.println(solution(-4, 1, 2, 6, 0, -1, 4, 3));
-//
-//		Map<Integer, Integer> map = new HashMap<Integer, Integer>();
-//		int k=10;
-//		for (int i = 0; i < A.length; i++) {
-//			map.merge( K - A[i], 1, Integer::sum);
-//		}
-//		return Arrays.stream(A).map(element -> map.getOrDefault(element, 0)).sum();
-//	}
 }
