@@ -39,7 +39,7 @@ public class MyCollectionUser {
       collection.add(i);
     }
 
-    Iterator itr = collection.iterator();
+    //Iterator itr = collection.iterator();
 
     for (Integer i : collection) {
       System.out.println(i);

@@ -32,7 +32,7 @@ public class DeadLockEntryPoint {
    */
   public static void main(String[] args) {
     DeadLockThreadImplementation deadLockEntryPoint = new DeadLockThreadImplementation();
-    Thread thread = new Thread(deadLockEntryPoint);
+    new Thread(deadLockEntryPoint);
     deadLockEntryPoint.directMethod();
   }
 }

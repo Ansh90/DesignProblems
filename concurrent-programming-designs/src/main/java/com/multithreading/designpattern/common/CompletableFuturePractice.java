@@ -58,6 +58,14 @@ public class CompletableFuturePractice {
 
     Future<?> futureObj1 = executorService.submit(runnable);
 
+    try {
+      futureObj1.get();
+    } catch (InterruptedException e) {
+      e.printStackTrace();
+    } catch (ExecutionException e) {
+      e.printStackTrace();
+    }
+
     /**
      * If you have a task which either throws checked exception or require
      * to return something in Future object or both then use callable.
@@ -118,6 +126,13 @@ public class CompletableFuturePractice {
      * to run task.
      */
     CompletableFuture<String> completableFuture2 = CompletableFuture.supplyAsync(supplier, executorService);
+
+
+    completableFuture.getNow("Some Default Value");
+
+    completableFuture1.join();
+
+    completableFuture2.obtrudeValue("Some default value");
 
     executorService.shutdown();
   }

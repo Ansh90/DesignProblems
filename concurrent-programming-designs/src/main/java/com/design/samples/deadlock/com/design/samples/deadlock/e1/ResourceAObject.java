@@ -42,7 +42,7 @@ public class ResourceAObject implements Resource {
     String threadName = Thread.currentThread().getName();
     System.out.println(threadName);
     try {
-      Thread.sleep(1000);
+      resource.wait();
       System.out.println("Reached post sleep");
     } catch (InterruptedException ie) {
       System.out.println(ie.getMessage());
