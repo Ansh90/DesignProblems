@@ -1,14 +1,15 @@
 package com.interview.coding.problems;
 
-//Problem: https://www.hackerrank.com/challenges/acm-icpc-team 
-//Java 8 
+import java.util.Scanner;
 
-import java.io.*;
-import java.util.*;
-import java.lang.Math;
-
+/**
+ * PerfectTeamp
+ */
 public class PerfectTeamp {
 
+  /**
+   * @param args none
+   */
   public static void main(String[] args) {
     /* Enter your code here. Read input from STDIN. Print output to STDOUT. Your class should be named Solution. */
     Scanner input = new Scanner(System.in);
