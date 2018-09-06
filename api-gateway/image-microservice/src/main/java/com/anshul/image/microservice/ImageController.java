@@ -20,24 +20,25 @@
  * OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN
  * THE SOFTWARE.
  */
-package com.iluwatar.image.microservice;
+package com.anshul.image.microservice;
 
-import org.springframework.boot.SpringApplication;
-import org.springframework.boot.autoconfigure.SpringBootApplication;
+import org.springframework.web.bind.annotation.RequestMapping;
+import org.springframework.web.bind.annotation.RequestMethod;
+import org.springframework.web.bind.annotation.RestController;
 
 /**
- * ImageApplication starts up Spring Boot, exposing endpoints for the Image microservice through
- * the {@link ImageController}.
+ * Exposes the Image microservice's endpoints
  */
-@SpringBootApplication
-public class ImageApplication {
+@RestController
+public class ImageController {
 
   /**
-   * Microservice entry point
+   * An endpoint for a user to retrieve an image path
    *
-   * @param args command line args
+   * @return An image path
    */
-  public static void main(String[] args) {
-    SpringApplication.run(ImageApplication.class, args);
+  @RequestMapping(value = "/image-path", method = RequestMethod.GET)
+  public String getImagePath() {
+    return "/product-image.png";
   }
 }

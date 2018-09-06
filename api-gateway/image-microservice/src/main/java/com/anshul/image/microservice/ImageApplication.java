@@ -20,22 +20,24 @@
  * OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN
  * THE SOFTWARE.
  */
-package com.iluwatar.image.microservice;
+package com.anshul.image.microservice;
 
-import org.junit.jupiter.api.Test;
-
-import static org.junit.jupiter.api.Assertions.assertEquals;
+import org.springframework.boot.SpringApplication;
+import org.springframework.boot.autoconfigure.SpringBootApplication;
 
 /**
- * Test for Image Rest Controller
+ * ImageApplication starts up Spring Boot, exposing endpoints for the Image microservice through
+ * the {@link ImageController}.
  */
-public class ImageControllerTest {
-  @Test
-  public void testGetImagePath() {
-    ImageController imageController = new ImageController();
+@SpringBootApplication
+public class ImageApplication {
 
-    String imagePath = imageController.getImagePath();
-
-    assertEquals("/product-image.png", imagePath);
+  /**
+   * Microservice entry point
+   *
+   * @param args command line args
+   */
+  public static void main(String[] args) {
+    SpringApplication.run(ImageApplication.class, args);
   }
 }

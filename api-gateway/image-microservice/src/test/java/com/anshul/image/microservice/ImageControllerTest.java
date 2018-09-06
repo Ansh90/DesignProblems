@@ -20,25 +20,22 @@
  * OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN
  * THE SOFTWARE.
  */
-package com.iluwatar.image.microservice;
+package com.anshul.image.microservice;
 
-import org.springframework.web.bind.annotation.RequestMapping;
-import org.springframework.web.bind.annotation.RequestMethod;
-import org.springframework.web.bind.annotation.RestController;
+import org.junit.jupiter.api.Test;
+
+import static org.junit.jupiter.api.Assertions.assertEquals;
 
 /**
- * Exposes the Image microservice's endpoints
+ * Test for Image Rest Controller
  */
-@RestController
-public class ImageController {
+public class ImageControllerTest {
+  @Test
+  public void testGetImagePath() {
+    ImageController imageController = new ImageController();
 
-  /**
-   * An endpoint for a user to retrieve an image path
-   *
-   * @return An image path
-   */
-  @RequestMapping(value = "/image-path", method = RequestMethod.GET)
-  public String getImagePath() {
-    return "/product-image.png";
+    String imagePath = imageController.getImagePath();
+
+    assertEquals("/product-image.png", imagePath);
   }
 }
