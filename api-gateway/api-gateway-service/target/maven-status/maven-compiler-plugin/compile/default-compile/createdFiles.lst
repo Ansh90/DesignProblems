@@ -1,8 +1,0 @@
-com/iluwatar/api/gateway/MobileProduct.class
-com/iluwatar/api/gateway/PriceClient.class
-com/iluwatar/api/gateway/DesktopProduct.class
-com/iluwatar/api/gateway/App.class
-com/iluwatar/api/gateway/ImageClient.class
-com/iluwatar/api/gateway/ImageClientImpl.class
-com/iluwatar/api/gateway/ApiGateway.class
-com/iluwatar/api/gateway/PriceClientImpl.class

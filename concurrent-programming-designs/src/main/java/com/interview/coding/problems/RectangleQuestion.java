@@ -55,7 +55,6 @@ public class RectangleQuestion {
     if (k > r || l > s || m < p || n < q) {
       isoverlap = false;
     }
-
     if (isoverlap) {
       return totalArea - areaklmn;
     } else {
