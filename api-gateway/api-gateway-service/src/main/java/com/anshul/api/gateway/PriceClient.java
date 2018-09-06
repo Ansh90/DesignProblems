@@ -20,35 +20,11 @@
  * OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN
  * THE SOFTWARE.
  */
-package com.iluwatar.api.gateway;
+package com.anshul.api.gateway;
 
 /**
- * Encapsulates all of the information that a desktop client needs to display a product.
+ * An interface used to communicate with the Price microservice
  */
-public class DesktopProduct {
-  /**
-   * The price of the product
-   */
-  private String price;
-
-  /**
-   * The path to the image of the product
-   */
-  private String imagePath;
-
-  public String getPrice() {
-    return price;
-  }
-
-  public void setPrice(String price) {
-    this.price = price;
-  }
-
-  public String getImagePath() {
-    return imagePath;
-  }
-
-  public void setImagePath(String imagePath) {
-    this.imagePath = imagePath;
-  }
+public interface PriceClient {
+  String getPrice();
 }

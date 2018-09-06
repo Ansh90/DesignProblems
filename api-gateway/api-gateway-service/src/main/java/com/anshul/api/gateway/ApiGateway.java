@@ -20,62 +20,47 @@
  * OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN
  * THE SOFTWARE.
  */
-package com.iluwatar.api.gateway;
+package com.anshul.api.gateway;
 
-import org.junit.jupiter.api.BeforeEach;
-import org.junit.jupiter.api.Test;
-import org.mockito.InjectMocks;
-import org.mockito.Mock;
-import org.mockito.MockitoAnnotations;
+import org.springframework.web.bind.annotation.RequestMapping;
+import org.springframework.web.bind.annotation.RestController;
 
-import static org.junit.jupiter.api.Assertions.assertEquals;
-import static org.mockito.Mockito.when;
+import javax.annotation.Resource;
 
 /**
- * Test API Gateway Pattern
+ * The ApiGateway aggregates calls to microservices based on the needs of the individual clients.
  */
-public class ApiGatewayTest {
+@RestController
+public class ApiGateway {
 
-  @InjectMocks
-  private ApiGateway apiGateway;
-
-  @Mock
+  @Resource
   private ImageClient imageClient;
 
-  @Mock
+  @Resource
   private PriceClient priceClient;
 
-  @BeforeEach
-  public void setup() {
-    MockitoAnnotations.initMocks(this);
+  /**
+   * Retrieves product information that desktop clients need
+   *
+   * @return Product information for clients on a desktop
+   */
+  @RequestMapping("/desktop")
+  public DesktopProduct getProductDesktop() {
+    DesktopProduct desktopProduct = new DesktopProduct();
+    desktopProduct.setImagePath(imageClient.getImagePath());
+    desktopProduct.setPrice(priceClient.getPrice());
+    return desktopProduct;
   }
 
   /**
-   * Tests getting the data for a desktop client
+   * Retrieves product information that mobile clients need
+   *
+   * @return Product information for clients on a mobile device
    */
-  @Test
-  public void testGetProductDesktop() {
-    String imagePath = "/product-image.png";
-    String price = "20";
-    when(imageClient.getImagePath()).thenReturn(imagePath);
-    when(priceClient.getPrice()).thenReturn(price);
-
-    DesktopProduct desktopProduct = apiGateway.getProductDesktop();
-
-    assertEquals(price, desktopProduct.getPrice());
-    assertEquals(imagePath, desktopProduct.getImagePath());
-  }
-
-  /**
-   * Tests getting the data for a mobile client
-   */
-  @Test
-  public void testGetProductMobile() {
-    String price = "20";
-    when(priceClient.getPrice()).thenReturn(price);
-
-    MobileProduct mobileProduct = apiGateway.getProductMobile();
-
-    assertEquals(price, mobileProduct.getPrice());
+  @RequestMapping("/mobile")
+  public MobileProduct getProductMobile() {
+    MobileProduct mobileProduct = new MobileProduct();
+    mobileProduct.setPrice(priceClient.getPrice());
+    return mobileProduct;
   }
 }

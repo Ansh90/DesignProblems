@@ -20,11 +20,22 @@
  * OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN
  * THE SOFTWARE.
  */
-package com.iluwatar.api.gateway;
+package com.anshul.api.gateway;
 
 /**
- * An interface used to communicate with the Price microservice
+ * Encapsulates all of the information that mobile client needs to display a product.
  */
-public interface PriceClient {
-  String getPrice();
+public class MobileProduct {
+  /**
+   * The price of the product
+   */
+  private String price;
+
+  public String getPrice() {
+    return price;
+  }
+
+  public void setPrice(String price) {
+    this.price = price;
+  }
 }

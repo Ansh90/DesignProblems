@@ -20,22 +20,38 @@
  * OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN
  * THE SOFTWARE.
  */
-package com.iluwatar.api.gateway;
+package com.anshul.api.gateway;
+
+import org.apache.http.client.methods.CloseableHttpResponse;
+import org.apache.http.client.methods.HttpGet;
+import org.apache.http.impl.client.CloseableHttpClient;
+import org.apache.http.impl.client.HttpClients;
+import org.apache.http.util.EntityUtils;
+import org.springframework.stereotype.Component;
+
+import java.io.IOException;
 
 /**
- * Encapsulates all of the information that mobile client needs to display a product.
+ * An adapter to communicate with the Image microservice
  */
-public class MobileProduct {
+@Component
+public class ImageClientImpl implements ImageClient {
   /**
-   * The price of the product
+   * Makes a simple HTTP Get request to the Image microservice
+   *
+   * @return The path to the image
    */
-  private String price;
-
-  public String getPrice() {
-    return price;
-  }
-
-  public void setPrice(String price) {
-    this.price = price;
+  @Override
+  public String getImagePath() {
+    String response = null;
+    try (CloseableHttpClient httpClient = HttpClients.createDefault()) {
+      HttpGet httpGet = new HttpGet("http://localhost:50005/image-path");
+      try (CloseableHttpResponse httpResponse = httpClient.execute(httpGet)) {
+        response = EntityUtils.toString(httpResponse.getEntity());
+      }
+    } catch (IOException e) {
+      e.printStackTrace();
+    }
+    return response;
   }
 }
