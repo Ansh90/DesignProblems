@@ -20,25 +20,22 @@
  * OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN
  * THE SOFTWARE.
  */
-package com.iluwatar.price.microservice;
+package com.anshul.price.microservice;
 
-import org.springframework.web.bind.annotation.RequestMapping;
-import org.springframework.web.bind.annotation.RequestMethod;
-import org.springframework.web.bind.annotation.RestController;
+import org.junit.jupiter.api.Test;
+
+import static org.junit.jupiter.api.Assertions.assertEquals;
 
 /**
- * Exposes the Price microservice's endpoints
+ * Test for Price Rest Controller
  */
-@RestController
-public class PriceController {
+public class PriceControllerTest {
+  @Test
+  public void testgetPrice() {
+    PriceController priceController = new PriceController();
 
-  /**
-   * An endpoint for a user to retrieve a product's price
-   *
-   * @return A product's price
-   */
-  @RequestMapping(value = "/price", method = RequestMethod.GET)
-  public String getPrice() {
-    return "20";
+    String price = priceController.getPrice();
+
+    assertEquals("20", price);
   }
 }
