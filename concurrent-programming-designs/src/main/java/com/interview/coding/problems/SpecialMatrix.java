@@ -1,3 +1,25 @@
+/**
+ * The MIT License
+ * Copyright (c) 2018 Anshul Mohil
+ * <p>
+ * Permission is hereby granted, free of charge, to any person obtaining a copy
+ * of this software and associated documentation files (the "Software"), to deal
+ * in the Software without restriction, including without limitation the rights
+ * to use, copy, modify, merge, publish, distribute, sublicense, and/or sell
+ * copies of the Software, and to permit persons to whom the Software is
+ * furnished to do so, subject to the following conditions:
+ * <p>
+ * The above copyright notice and this permission notice shall be included in
+ * all copies or substantial portions of the Software.
+ * <p>
+ * THE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR
+ * IMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES OF MERCHANTABILITY,
+ * FITNESS FOR A PARTICULAR PURPOSE AND NONINFRINGEMENT. IN NO EVENT SHALL THE
+ * AUTHORS OR COPYRIGHT HOLDERS BE LIABLE FOR ANY CLAIM, DAMAGES OR OTHER
+ * LIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING FROM,
+ * OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN
+ * THE SOFTWARE.
+ */
 package com.interview.coding.problems;
 
 import java.util.Collections;
@@ -33,15 +55,22 @@ public class SpecialMatrix {
     finalList.add(l1);
     finalList.add(l2);
     finalList.add(l3);
+    int finalCount = countSpecialElements(finalList);
+    System.out.println(finalCount);
   }
 
+  /**
+   *
+   * @param matrix 2D array
+   * @return count
+   */
   public static int countSpecialElements(List<List<Integer>> matrix) {
 
     int finalVal = 0;
-    int row_len = matrix.size();
-    int col_len = matrix.get(0).size();
-    for (int row = 0; row < row_len; row++) {
-      for (int col = 0; col < col_len; col++) {
+    int rowLen = matrix.size();
+    int colLen = matrix.get(0).size();
+    for (int row = 0; row < rowLen; row++) {
+      for (int col = 0; col < colLen; col++) {
         int currentVal = matrix.get(row).get(col);
         if ((isMaxInRow(matrix, row, currentVal) && isMaxInCol(matrix, col, currentVal))
             || (isMinInRow(matrix, row, currentVal) && isMinInCol(matrix, col, currentVal))) {
