@@ -21,7 +21,7 @@
  * THE SOFTWARE.
  */
 
-package com.iluwatar.composite;
+package com.anshul.composite;
 
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
