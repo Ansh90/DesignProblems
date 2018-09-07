@@ -20,28 +20,23 @@
  * OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN
  * THE SOFTWARE.
  */
-package com.iluwatar.composite;
-
-import java.util.List;
+package com.anshul.composite;
 
 /**
  *
- * Sentence
+ * Letter
  *
  */
-public class Sentence extends LetterComposite {
+public class Letter extends LetterComposite {
 
-  /**
-   * Constructor
-   */
-  public Sentence(List<Word> words) {
-    for (Word w : words) {
-      this.add(w);
-    }
+  private char c;
+
+  public Letter(char c) {
+    this.c = c;
   }
 
   @Override
-  protected void printThisAfter() {
-    System.out.print(".");
+  protected void printThisBefore() {
+    System.out.print(c);
   }
 }
