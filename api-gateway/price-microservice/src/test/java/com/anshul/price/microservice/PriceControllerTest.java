@@ -25,6 +25,7 @@ package com.anshul.price.microservice;
 import org.junit.jupiter.api.Test;
 
 import static org.junit.jupiter.api.Assertions.assertEquals;
+import static org.junit.jupiter.api.Assertions.assertNotEquals;
 
 /**
  * Test for Price Rest Controller
@@ -37,5 +38,6 @@ public class PriceControllerTest {
     String price = priceController.getPrice();
 
     assertEquals("20", price);
+    assertNotEquals("30", price);
   }
 }
