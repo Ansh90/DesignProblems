@@ -25,12 +25,13 @@
 <project xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns="http://maven.apache.org/POM/4.0.0"
          xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
     <modelVersion>4.0.0</modelVersion>
-    <groupId>com.anshul</groupId>
-    <artifactId>springmvc-raml-based-api-design</artifactId>
+
 
     <description>A project which generates a client-server implementation of the Spring MVC-RAML plugin</description>
     <url></url>
     <name>Springboot RAML based API design</name>
+    <groupId>com.anshul</groupId>
+    <artifactId>springmvc-raml-based-api-design</artifactId>
     <version>1.0.0</version>
     <packaging>pom</packaging>
 
@@ -41,14 +42,14 @@
     </parent>
 
     <properties>
-        <plugin-version>1.0.0</plugin-version>
+        <plugin-version>0.8.6</plugin-version>
         <output-relative-path>target/generated-raml-mvc</output-relative-path>
     </properties>
 
-    <!--<modules>-->
-    <!--<module>drinks-server</module>-->
-    <!--<module>drinks-client</module>-->
-    <!--</modules>-->
+    <modules>
+    <module>drinks-server</module>
+    <module>drinks-client</module>
+    </modules>
 
     <dependencyManagement>
         <dependencies>
