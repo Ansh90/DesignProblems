@@ -63,4 +63,5 @@ public class ApiGateway {
     mobileProduct.setPrice(priceClient.getPrice());
     return mobileProduct;
   }
+
 }
