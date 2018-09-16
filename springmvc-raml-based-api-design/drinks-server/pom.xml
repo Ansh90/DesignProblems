@@ -36,10 +36,10 @@
     <version>1.0.0</version>
     <packaging>pom</packaging>
 
-   <parent>
-    <groupId>com.anshul</groupId>
-    <artifactId>springmvc-raml-based-api-design</artifactId>
-    <version>1.0.0</version>
+    <parent>
+        <groupId>com.anshul</groupId>
+        <artifactId>springmvc-raml-based-api-design</artifactId>
+        <version>1.0.0</version>
     </parent>
 
     <properties>
