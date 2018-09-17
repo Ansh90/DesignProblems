@@ -24,7 +24,6 @@ package com.anshul.oss.sample.server.exceptions;
 
 /**
  * Custom exception for use with sample services
- *
  */
 public class DrinkNotFoundException extends Exception {
 

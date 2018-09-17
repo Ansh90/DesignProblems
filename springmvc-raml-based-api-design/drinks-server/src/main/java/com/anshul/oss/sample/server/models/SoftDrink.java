@@ -26,7 +26,6 @@ import com.anshul.oss.sample.server.models.enums.DrinkTypeEnum;
 
 /**
  * Concrete implementation of a drink type
- *
  */
 public class SoftDrink extends AbstractDrink {
 

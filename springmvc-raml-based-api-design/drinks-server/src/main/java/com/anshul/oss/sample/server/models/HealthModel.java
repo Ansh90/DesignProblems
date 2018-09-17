@@ -29,7 +29,6 @@ import org.joda.time.DateTime;
  * Simple representation of a server's health status
  * to assert successfulness of server's
  * boot-up
- *
  */
 public class HealthModel {
 

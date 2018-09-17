@@ -26,7 +26,6 @@ import com.anshul.oss.sample.server.models.enums.DrinkTypeEnum;
 
 /**
  * Abstract representation of a drink. Adds some simple fields to work with.
- *
  */
 public abstract class AbstractDrink {
 
