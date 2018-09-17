@@ -20,11 +20,11 @@
  * OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN
  * THE SOFTWARE.
  */
-package com.phoenixnap.oss.sample.client.test;
+package com.anshul.oss.sample.client.test;
 
 import com.phoenixnap.oss.sample.client.HealthCheckClient;
 import com.phoenixnap.oss.sample.client.model.GetHealthCheckResponse;
-import com.phoenixnap.oss.sample.main.ClientLauncher;
+import com.anshul.oss.sample.main.ClientLauncher;
 import com.phoenixnap.oss.sample.server.ServerLauncher;
 import org.junit.Assert;
 import org.junit.Test;

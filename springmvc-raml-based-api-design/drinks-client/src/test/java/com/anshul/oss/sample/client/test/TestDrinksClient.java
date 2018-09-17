@@ -20,16 +20,16 @@
  * OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN
  * THE SOFTWARE.
  */
-package com.phoenixnap.oss.sample.client.test;
+package com.anshul.oss.sample.client.test;
 
+import com.anshul.oss.sample.client.test.factory.DrinkFactory;
 import com.netflix.hystrix.exception.HystrixRuntimeException;
 import com.phoenixnap.oss.sample.client.DrinkClient;
 import com.phoenixnap.oss.sample.client.model.CreateDrinkRequest;
 import com.phoenixnap.oss.sample.client.model.GetDrinkByIdResponse;
 import com.phoenixnap.oss.sample.client.model.GetDrinksResponse;
 import com.phoenixnap.oss.sample.client.model.UpdateDrinkByIdRequest;
-import com.phoenixnap.oss.sample.client.test.factory.DrinkFactory;
-import com.phoenixnap.oss.sample.main.ClientLauncher;
+import com.anshul.oss.sample.main.ClientLauncher;
 import com.phoenixnap.oss.sample.server.ServerLauncher;
 import feign.FeignException;
 import org.junit.Assert;

@@ -20,7 +20,7 @@
  * OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN
  * THE SOFTWARE.
  */
-package com.phoenixnap.oss.sample.client.test.factory;
+package com.anshul.oss.sample.client.test.factory;
 
 import com.phoenixnap.oss.sample.client.model.CreateDrinkRequest;
 
