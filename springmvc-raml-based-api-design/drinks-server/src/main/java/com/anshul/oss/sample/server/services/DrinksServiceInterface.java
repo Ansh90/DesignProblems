@@ -28,7 +28,7 @@ import com.anshul.oss.sample.server.models.AbstractDrink;
 import java.util.List;
 
 /**
- * @author kristiang
+ * DrinksServiceInterface
  */
 public interface DrinksServiceInterface {
 

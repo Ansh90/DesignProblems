@@ -47,7 +47,6 @@ import java.util.List;
  * Delegate implementation of the DrinkController for use by the generated endpoint
  * controller
  *
- * @author kristiang
  */
 @Component
 public class DrinkControllerImpl implements DrinkController {

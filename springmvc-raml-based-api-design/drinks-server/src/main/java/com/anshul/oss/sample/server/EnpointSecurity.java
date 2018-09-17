@@ -31,7 +31,6 @@ import org.springframework.security.config.annotation.web.configuration.WebSecur
  * Class required for removing security on RestController endpoints and prevent
  * 403 Forbidden errors during testing
  *
- * @author kristiang
  */
 @Configuration
 @EnableWebSecurity

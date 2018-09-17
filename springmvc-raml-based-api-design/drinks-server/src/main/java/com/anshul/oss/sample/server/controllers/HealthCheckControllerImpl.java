@@ -33,7 +33,6 @@ import org.springframework.stereotype.Component;
 /**
  * Delegate implementation of the HealthCheck Controller to be used by the generated controller
  *
- * @author kristiang
  */
 @Component
 public class HealthCheckControllerImpl implements HealthCheckController {

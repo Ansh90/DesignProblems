@@ -28,8 +28,7 @@ import org.springframework.context.annotation.Bean;
 import org.springframework.web.client.RestTemplate;
 
 /**
- * @author kristiang
- * @author Aleksandar Stojsavljevic (aleksandars@ccbill.com)
+ * ServerLauncher
  */
 @SpringBootApplication(scanBasePackages = "com.phoenixnap.oss.sample.server")
 public class ServerLauncher {

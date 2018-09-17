@@ -30,7 +30,6 @@ import org.joda.time.DateTime;
  * to assert successfulness of server's
  * boot-up
  *
- * @author kristiang
  */
 public class HealthModel {
 

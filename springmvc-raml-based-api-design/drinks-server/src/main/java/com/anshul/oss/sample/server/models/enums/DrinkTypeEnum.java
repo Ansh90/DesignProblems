@@ -23,7 +23,7 @@
 package com.anshul.oss.sample.server.models.enums;
 
 /**
- * @author kristiang
+ * DrinkTypeEnum
  */
 public enum DrinkTypeEnum {
   SOFT_DRINK, ALCOHOL

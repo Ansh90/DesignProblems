@@ -38,7 +38,6 @@ import java.util.Map;
 /**
  * Simple service layer performing CRUD tasks on an in-memory map of POJOs.
  *
- * @author kristiang
  */
 @Component
 public class DrinkServiceImpl implements DrinksServiceInterface {

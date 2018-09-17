@@ -23,7 +23,7 @@
 package com.anshul.oss.sample.server.models.enums;
 
 /**
- * @author kristiang
+ *
  */
 public enum HealthStatusEnum {
 
