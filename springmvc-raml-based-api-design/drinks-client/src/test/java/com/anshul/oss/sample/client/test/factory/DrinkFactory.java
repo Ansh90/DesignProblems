@@ -27,9 +27,7 @@ import com.phoenixnap.oss.sample.client.model.CreateDrinkRequest;
 import java.util.UUID;
 
 /**
- * Simple factory class to generate CreateDrinkRequests on the fly
- *
- * @author kristiang
+ * DrinkFactory
  */
 public class DrinkFactory {
 

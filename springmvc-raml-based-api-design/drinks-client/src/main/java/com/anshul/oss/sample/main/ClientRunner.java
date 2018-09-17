@@ -39,8 +39,7 @@ import java.util.List;
 import static org.junit.Assert.assertTrue;
 
 /**
- * @author kristiang
- * @author Aleksandar Stojsavljevic (aleksandars@ccbill.com)
+ * ClientRunner
  */
 @Component
 public class ClientRunner

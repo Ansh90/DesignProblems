@@ -38,7 +38,9 @@ import org.springframework.test.annotation.DirtiesContext;
 import org.springframework.test.annotation.DirtiesContext.ClassMode;
 import org.springframework.test.context.junit4.SpringRunner;
 
-
+/**
+ * TestHealthCheckClient
+ */
 @RunWith(SpringRunner.class)
 @SpringBootTest(classes = {ServerLauncher.class, ClientLauncher.class}, webEnvironment = WebEnvironment.DEFINED_PORT)
 @DirtiesContext(classMode = ClassMode.AFTER_CLASS)

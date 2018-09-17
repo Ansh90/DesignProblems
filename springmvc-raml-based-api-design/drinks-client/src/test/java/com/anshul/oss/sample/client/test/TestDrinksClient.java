@@ -53,7 +53,6 @@ import java.util.List;
  * by the client should map directly onto an endpoint made available by the
  * controller.
  *
- * @author kristiang
  */
 @RunWith(SpringRunner.class)
 @SpringBootTest(classes = {ServerLauncher.class, ClientLauncher.class}, webEnvironment = WebEnvironment.DEFINED_PORT)

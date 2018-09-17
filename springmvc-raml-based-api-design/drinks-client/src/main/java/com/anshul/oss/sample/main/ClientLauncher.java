@@ -30,8 +30,7 @@ import org.springframework.context.annotation.PropertySource;
 import org.springframework.web.client.RestTemplate;
 
 /**
- * @author kristiang
- * @author Aleksandar Stojsavljevic (aleksandars@ccbill.com)
+ * ClientLauncher
  */
 @EnableFeignClients(basePackages = "com.phoenixnap.oss.sample.client")
 @PropertySource("classpath:client.properties")
