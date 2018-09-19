@@ -67,6 +67,7 @@
         <module>concurrent-programming-designs</module>
         <module>api-gateway</module>
         <module>composite</module>
+        <module>core</module>
         <!--<module>springmvc-raml-based-api-design</module>-->
     </modules>
 

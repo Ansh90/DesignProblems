@@ -1,3 +1,25 @@
+/**
+ * The MIT License
+ * Copyright (c) 2018 Anshul Mohil
+ *
+ * Permission is hereby granted, free of charge, to any person obtaining a copy
+ * of this software and associated documentation files (the "Software"), to deal
+ * in the Software without restriction, including without limitation the rights
+ * to use, copy, modify, merge, publish, distribute, sublicense, and/or sell
+ * copies of the Software, and to permit persons to whom the Software is
+ * furnished to do so, subject to the following conditions:
+ *
+ * The above copyright notice and this permission notice shall be included in
+ * all copies or substantial portions of the Software.
+ *
+ * THE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR
+ * IMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES OF MERCHANTABILITY,
+ * FITNESS FOR A PARTICULAR PURPOSE AND NONINFRINGEMENT. IN NO EVENT SHALL THE
+ * AUTHORS OR COPYRIGHT HOLDERS BE LIABLE FOR ANY CLAIM, DAMAGES OR OTHER
+ * LIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING FROM,
+ * OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN
+ * THE SOFTWARE.
+ */
 package com.interview.coding.problems;
 
 //Find the total area covered by two rectilinear rectangles in a 2D plane.
@@ -27,31 +49,32 @@ public class OverLappingRectangle {
   /**
    *
    * all parameters are co-ordinates
-   * @param A a
-   * @param B b
-   * @param C c
-   * @param D d
-   * @param E e
-   * @param F f
-   * @param G g
-   * @param H h
+   * @param a a
+   * @param b b
+   * @param c c
+   * @param d d
+   * @param e e
+   * @param f f
+   * @param g g
+   * @param h h
    * @return final overlapped area
    */
-  public int computeArea(int A, int B, int C, int D, int E, int F, int G, int H) {
+  public int computeArea(int a, int b, int c, int d, int e, int f, int g, int h) {
 
-        int areaOfSqrA = (C-A) * (D-B);
-         int areaOfSqrB = (G-E) * (H-F);
+    int areaOfSqrA = (c - a) * (d - b);
+    int areaOfSqrB = (g - e) * (h - f);
 
-        int left = Math.max(A, E);
-        int right = Math.min(G, C);
-        int bottom = Math.max(F, B);
-        int top = Math.min(D, H);
+    int left = Math.max(a, e);
+    int right = Math.min(g, c);
+    int bottom = Math.max(f, b);
+    int top = Math.min(d, h);
 
-        //If overlap
-        int overlap = 0;
-        if(right > left && top > bottom)
-             overlap = (right - left) * (top - bottom);
-
-        return areaOfSqrA + areaOfSqrB - overlap;
+    //If overlap
+    int overlap = 0;
+    if (right > left && top > bottom) {
+      overlap = (right - left) * (top - bottom);
     }
+
+    return areaOfSqrA + areaOfSqrB - overlap;
+  }
 }
