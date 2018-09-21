@@ -2,7 +2,17 @@ package com.musicapp.dao.hr;
 
 public class UserFiles {
   private long fileId;
-  private String fileName;
+  private long userId;
+  private String fileTypeId;
+
+
+  public long getUserId() {
+    return userId;
+  }
+
+  public void setUserId(long userId) {
+    this.userId = userId;
+  }
 
   public long getFileId() {
     return fileId;
@@ -12,11 +22,11 @@ public class UserFiles {
     this.fileId = fileId;
   }
 
-  public String getFileName() {
-    return fileName;
+  public String getFileTypeId() {
+    return fileTypeId;
   }
 
-  public void setFileName(String fileName) {
-    this.fileName = fileName;
+  public void setFileTypeId(String fileTypeId) {
+    this.fileTypeId = fileTypeId;
   }
 }

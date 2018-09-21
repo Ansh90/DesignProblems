@@ -13,7 +13,7 @@ public class PlaylistParent {
   private long userId;
   private String name;
 
-  private List<Song> songs;
+//  private List<Song> songs;
 
   public long getPlaylistId() {
     return playlistId;
