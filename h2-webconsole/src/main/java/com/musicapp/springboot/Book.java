@@ -1,4 +1,4 @@
-package com.memorynotfound.springboot;
+package com.musicapp.springboot;
 
 import javax.persistence.*;
 

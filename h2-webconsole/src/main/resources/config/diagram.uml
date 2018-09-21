@@ -1,0 +1,33 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Diagram>
+  <ID>JAVA</ID>
+  <OriginalElement />
+  <nodes>
+    <node x="0.0" y="255.0">com.musicapp.dao.music.Playlist</node>
+    <node x="12.0" y="0.0">com.musicapp.dao.hr.User</node>
+    <node x="222.0" y="0.0">com.musicapp.dao.music.Album</node>
+    <node x="0.0" y="623.0">com.musicapp.dao.music.Label</node>
+    <node x="235.0" y="395.0">com.musicapp.dao.hr.UserType</node>
+    <node x="460.0" y="395.0">com.musicapp.dao.hr.UserFiles</node>
+    <node x="0.0" y="395.0">com.musicapp.dao.music.Song</node>
+  </nodes>
+  <notes />
+  <edges>
+    <edge source="com.musicapp.dao.music.Playlist" target="com.musicapp.dao.hr.User">
+      <point x="0.0" y="-47.5" />
+      <point x="0.0" y="102.5" />
+    </edge>
+  </edges>
+  <settings layout="Hierarchic Group" zoom="1.0" x="212.5" y="172.5" />
+  <SelectedNodes>
+    <node>com.musicapp.dao.hr.User</node>
+  </SelectedNodes>
+  <Categories>
+    <Category>Fields</Category>
+    <Category>Properties</Category>
+    <Category>Methods</Category>
+  </Categories>
+  <SCOPE>All</SCOPE>
+  <VISIBILITY>public</VISIBILITY>
+</Diagram>
+
