@@ -1,4 +1,4 @@
-package com.musicapp.dao.music;
+package com.musicapp.dao.other;
 
 public class Label {
   private long labelId;
