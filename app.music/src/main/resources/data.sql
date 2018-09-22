@@ -1,0 +1,69 @@
+
+--
+-- The MIT License
+-- Copyright (c) 2018 Anshul Mohil
+--
+-- Permission is hereby granted, free of charge, to any person obtaining a copy
+-- of this software and associated documentation files (the "Software"), to deal
+-- in the Software without restriction, including without limitation the rights
+-- to use, copy, modify, merge, publish, distribute, sublicense, and/or sell
+-- copies of the Software, and to permit persons to whom the Software is
+-- furnished to do so, subject to the following conditions:
+--
+-- The above copyright notice and this permission notice shall be included in
+-- all copies or substantial portions of the Software.
+--
+-- THE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR
+-- IMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES OF MERCHANTABILITY,
+-- FITNESS FOR A PARTICULAR PURPOSE AND NONINFRINGEMENT. IN NO EVENT SHALL THE
+-- AUTHORS OR COPYRIGHT HOLDERS BE LIABLE FOR ANY CLAIM, DAMAGES OR OTHER
+-- LIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING FROM,
+-- OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN
+-- THE SOFTWARE.
+--
+
+-- CREATE TABLE Txn
+-- (
+--     id long PRIMARY KEY,
+--     order_id long,
+--     txn_desc varchar2,
+--     CONSTRAINT Txn_Customer_id_fk FOREIGN KEY (order_id) REFERENCES Customer (id) ON DELETE CASCADE ON UPDATE CASCADE
+-- );
+--
+--
+-- CREATE TABLE Customer
+-- (
+--     id long PRIMARY KEY,
+--     txn_id long NOT NULL,
+--     cust_name varchar2,
+--     CONSTRAINT Customer_Txn_id_fk FOREIGN KEY (txn_id) REFERENCES Txn (id) ON DELETE CASCADE ON UPDATE CASCADE
+-- );
+--
+-- CREATE TABLE CustomerOrder
+-- (
+--     id long PRIMARY KEY,
+--     txn_id long NOT NULL,
+--     cust_name varchar2,
+--     CONSTRAINT Customer_Txn_id_fk FOREIGN KEY (txn_id) REFERENCES Txn (id) ON DELETE CASCADE ON UPDATE CASCADE
+-- );
+--
+-- INSERT INTO tbl_book (id, name, price) VALUES (1, 'Spring Boot - Spring Data JPA with Hibernate and H2 Web Console', 0.0)
+--
+--
+--
+--
+--
+--
+--
+-- CREATE TABLE USER_TYPE
+-- (
+--     USER_TYPE_ID long PRIMARY KEY,
+--     USER_TYPE VARCHAR NOT NULL,
+--     USER_TYPE_DESC VARCHAR
+-- );
+--
+insert into student values(10001,'Ranga', 'E1234567');
+-- insert into student values(10002,'Ravi', 'A1234568');
+
+
+--insert into user_type values (NULL, 'ADMIN', 'USER WITH HIGHEST PREVILAGES');

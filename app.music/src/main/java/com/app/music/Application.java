@@ -22,6 +22,9 @@
  */
 package com.app.music;
 
+import com.app.music.dao.UserDAO;
+import com.app.music.dao.models.hr.User;
+import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.boot.SpringApplication;
 import org.springframework.boot.autoconfigure.SpringBootApplication;
 
@@ -31,6 +34,8 @@ import org.springframework.boot.autoconfigure.SpringBootApplication;
 @SpringBootApplication
 public class Application {
 
+  @Autowired
+  private static UserDAO userDAO;
   /**
    * Application entrypont
    *
@@ -38,5 +43,6 @@ public class Application {
    */
   public static void main(String[] args) {
     SpringApplication.run(Application.class, args);
+    userDAO.create();
   }
 }

@@ -34,11 +34,11 @@
 
     <name>app.music</name>
     <description>Music App db service</description>
-    <parent>
-        <groupId>com.anshul</groupId>
-        <artifactId>design-problems</artifactId>
-        <version>1.0.0-SNAPSHOT</version>
-    </parent>
+    <!--<parent>-->
+        <!--<groupId>com.anshul</groupId>-->
+        <!--<artifactId>design-problems</artifactId>-->
+        <!--<version>1.0.0-SNAPSHOT</version>-->
+    <!--</parent>-->
 
     <dependencyManagement>
         <dependencies>
