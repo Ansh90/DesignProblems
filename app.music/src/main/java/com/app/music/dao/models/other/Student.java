@@ -20,7 +20,7 @@
  * OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN
  * THE SOFTWARE.
  */
-package com.app.music.com.app.music.dao;
+package com.app.music.dao.models.other;
 
 import javax.persistence.Entity;
 import javax.persistence.GeneratedValue;
@@ -33,7 +33,7 @@ import javax.persistence.Id;
 public class Student {
   @Id
   @GeneratedValue
-  private Long id;
+  private long id;
   private String name;
   private String passportNumber;
 
