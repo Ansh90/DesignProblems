@@ -45,5 +45,12 @@
             <artifactId>junit-jupiter-engine</artifactId>
             <scope>test</scope>
         </dependency>
+        <!-- TODO: Remove slf4j dependency after connecting this module to parent
+        as this dependency should come from parent project-->
+        <dependency>
+                <groupId>org.slf4j</groupId>
+                <artifactId>slf4j-api</artifactId>
+                <version>${slf4j.version}</version>
+            </dependency>
     </dependencies>
 </project>
