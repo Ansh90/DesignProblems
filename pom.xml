@@ -56,7 +56,7 @@
         <htmlunit.version>2.22</htmlunit.version>
         <guice.version>4.0</guice.version>
         <mongo-java-driver.version>3.3.0</mongo-java-driver.version>
-        <slf4j.version>1.7.21</slf4j.version>
+        <slf4j.version>1.7.25</slf4j.version>
         <logback.version>1.1.7</logback.version>
         <aws-lambda-core.version>1.1.0</aws-lambda-core.version>
         <aws-java-sdk-dynamodb.version>1.11.289</aws-java-sdk-dynamodb.version>
@@ -65,24 +65,25 @@
         <jackson.version>2.8.5</jackson.version>
         <argLine>-Xmx1024M</argLine>
     </properties>
-    <profiles>
-        <profile>
-            <id>
-                test
-            </id>
-        </profile>
-        <profile>
-            <id>
-                development
-            </id>
-        </profile>
-        <profile>
-            <id>
-                production
-            </id>
-        </profile>
-    </profiles>
+    <!--<profiles>-->
+    <!--<profile>-->
+    <!--<id>-->
+    <!--test-->
+    <!--</id>-->
+    <!--</profile>-->
+    <!--<profile>-->
+    <!--<id>-->
+    <!--development-->
+    <!--</id>-->
+    <!--</profile>-->
+    <!--<profile>-->
+    <!--<id>-->
+    <!--production-->
+    <!--</id>-->
+    <!--</profile>-->
+    <!--</profiles>-->
     <modules>
+        <module>async-method-invocation</module>
         <module>concurrent-programming-designs</module>
         <module>api-gateway</module>
         <module>composite</module>
@@ -94,6 +95,11 @@
         <repository>
             <id>jitpack.io</id>
             <url>https://jitpack.io</url>
+
+        </repository>
+        <repository>
+            <id>maven-repo</id>
+            <url>https://mvnrepository.com</url>
         </repository>
     </repositories>
 
@@ -225,11 +231,7 @@
                 <artifactId>mongo-java-driver</artifactId>
                 <version>${mongo-java-driver.version}</version>
             </dependency>
-            <dependency>
-                <groupId>org.slf4j</groupId>
-                <artifactId>slf4j-api</artifactId>
-                <version>${slf4j.version}</version>
-            </dependency>
+
             <dependency>
                 <groupId>ch.qos.logback</groupId>
                 <artifactId>logback-classic</artifactId>
@@ -243,39 +245,36 @@
         </dependencies>
     </dependencyManagement>
 
+    <!-- Keeping dependencies out of dependency management which we want to
+    provide to child poms-->
+    <dependencies>
+        <dependency>
+            <groupId>org.slf4j</groupId>
+            <artifactId>slf4j-api</artifactId>
+            <version>${slf4j.version}</version>
+        </dependency>
+        <!-- https://mvnrepository.com/artifact/org.slf4j/slf4j-jdk14 -->
+        <dependency>
+            <groupId>org.slf4j</groupId>
+            <artifactId>slf4j-jdk14</artifactId>
+            <version>${slf4j.version}</version>
+            <!--<scope>test</scope>-->
+        </dependency>
+        <!--&lt;!&ndash; https://mvnrepository.com/artifact/org.slf4j/slf4j-nop &ndash;&gt;-->
+        <dependency>
+            <groupId>org.slf4j</groupId>
+            <artifactId>slf4j-nop</artifactId>
+            <version>${slf4j.version}</version>
+            <!--<scope>test</scope>-->
+        </dependency>
+    </dependencies>
 
     <build>
         <pluginManagement>
             <plugins>
-                <plugin>
-                    <!-- Adding jacoco for code coverage-->
-                    <groupId>org.jacoco</groupId>
-                    <artifactId>jacoco-maven-plugin</artifactId>
-                    <version>${jacoco.version}</version>
-                    <configuration>
-                        <destFile>${basedir}/target/coverage-reports/jacoco-unit.exec</destFile>
-                        <dataFile>${basedir}/target/coverage-reports/jacoco-unit.exec</dataFile>
-                    </configuration>
-                    <executions>
-                        <execution>
-                            <id>jacoco-initialize</id>
-                            <goals>
-                                <goal>prepare-agent</goal>
-                            </goals>
-                        </execution>
-                        <execution>
-                            <id>jacoco-site</id>
-                            <phase>package</phase>
-                            <goals>
-                                <goal>report</goal>
-                            </goals>
-                        </execution>
-                    </executions>
-                </plugin>
-
                 <!-- This plugin's configuration is used to store Eclipse m2e settings
-                    only. It has no influence on the Maven build itself. TODO: Remove when the
-                    m2e plugin can correctly bind to Maven lifecycle -->
+                  only. It has no influence on the Maven build itself. TODO: Remove when the
+                  m2e plugin can correctly bind to Maven lifecycle -->
                 <plugin>
                     <groupId>org.eclipse.m2e</groupId>
                     <artifactId>lifecycle-mapping</artifactId>
@@ -304,116 +303,148 @@
                         </lifecycleMappingMetadata>
                     </configuration>
                 </plugin>
-
-                <!-- Tell maven to compile using Java 8 -->
-                <plugin>
-                    <groupId>org.apache.maven.plugins</groupId>
-                    <artifactId>maven-compiler-plugin</artifactId>
-                    <version>${compiler.version}</version>
-                    <configuration>
-                        <source>${java.version}</source>
-                        <target>${java.version}</target>
-                    </configuration>
-                </plugin>
-                <plugin>
-                    <groupId>org.jacoco</groupId>
-                    <artifactId>jacoco-maven-plugin</artifactId>
-                    <version>${jacoco.version}</version>
-                    <executions>
-                        <execution>
-                            <id>prepare-agent</id>
-                            <goals>
-                                <goal>prepare-agent</goal>
-                            </goals>
-                        </execution>
-                    </executions>
-                </plugin>
-
-                <!--checkstyle plug-in. checking against googles styles
-                   see config at checkstyle.xml
-                -->
-                <plugin>
-                    <groupId>org.apache.maven.plugins</groupId>
-                    <artifactId>maven-checkstyle-plugin</artifactId>
-                    <version>2.17</version>
-                    <executions>
-                        <execution>
-                            <id>validate</id>
-                            <goals>
-                                <goal>check</goal>
-                            </goals>
-                            <phase>validate</phase>
-                            <configuration>
-                                <configLocation>checkstyle.xml</configLocation>
-                                <suppressionsLocation>checkstyle-suppressions.xml</suppressionsLocation>
-                                <encoding>UTF-8</encoding>
-                                <consoleOutput>false</consoleOutput>
-                                <failsOnError>false</failsOnError>
-                                <includeTestSourceDirectory>false</includeTestSourceDirectory>
-                            </configuration>
-                        </execution>
-                    </executions>
-                </plugin>
-                <plugin>
-                    <groupId>org.apache.maven.plugins</groupId>
-                    <artifactId>maven-surefire-plugin</artifactId>
-                    <version>2.19.1</version>
-                    <dependencies>
-                        <dependency>
-                            <groupId>org.junit.platform</groupId>
-                            <artifactId>junit-platform-surefire-provider</artifactId>
-                            <version>${junit-platform.version}</version>
-                        </dependency>
-                    </dependencies>
-                    <configuration>
-                        <argLine>${argLine}</argLine>
-                    </configuration>
-                </plugin>
-                <plugin>
-                    <groupId>org.apache.maven.plugins</groupId>
-                    <artifactId>maven-pmd-plugin</artifactId>
-                    <version>3.6</version>
-                    <configuration>
-                        <!-- After migration mark this true-->
-                        <failOnViolation>false</failOnViolation>
-                        <failurePriority>5</failurePriority>
-                        <printFailingErrors>true</printFailingErrors>
-                    </configuration>
-                    <executions>
-                        <execution>
-                            <goals>
-                                <goal>check</goal>
-                            </goals>
-                            <configuration>
-                                <excludeFromFailureFile>exclude-pmd.properties</excludeFromFailureFile>
-                            </configuration>
-                        </execution>
-                    </executions>
-                </plugin>
-
-                <plugin>
-                    <groupId>com.mycila</groupId>
-                    <artifactId>license-maven-plugin</artifactId>
-                    <version>2.11</version>
-                    <configuration>
-                        <header>com/mycila/maven/plugin/license/templates/MIT.txt</header>
-                        <properties>
-                            <owner>Anshul Mohil</owner>
-                        </properties>
-                        <skipExistingHeaders>false</skipExistingHeaders>
-                    </configuration>
-                    <executions>
-                        <execution>
-                            <id>install-format</id>
-                            <phase>install</phase>
-                            <goals>
-                                <goal>format</goal>
-                            </goals>
-                        </execution>
-                    </executions>
-                </plugin>
             </plugins>
         </pluginManagement>
+
+
+        <plugins>
+            <plugin>
+                <!-- Adding jacoco for code coverage-->
+                <groupId>org.jacoco</groupId>
+                <artifactId>jacoco-maven-plugin</artifactId>
+                <version>${jacoco.version}</version>
+                <configuration>
+                    <destFile>${basedir}/target/coverage-reports/jacoco-unit.exec</destFile>
+                    <dataFile>${basedir}/target/coverage-reports/jacoco-unit.exec</dataFile>
+                </configuration>
+                <executions>
+                    <execution>
+                        <id>jacoco-initialize</id>
+                        <goals>
+                            <goal>prepare-agent</goal>
+                        </goals>
+                    </execution>
+                    <execution>
+                        <id>jacoco-site</id>
+                        <phase>package</phase>
+                        <goals>
+                            <goal>report</goal>
+                        </goals>
+                    </execution>
+                </executions>
+            </plugin>
+
+
+            <!-- Tell maven to compile using Java 8 -->
+            <plugin>
+                <groupId>org.apache.maven.plugins</groupId>
+                <artifactId>maven-compiler-plugin</artifactId>
+                <version>${compiler.version}</version>
+                <configuration>
+                    <source>${java.version}</source>
+                    <target>${java.version}</target>
+                </configuration>
+            </plugin>
+            <plugin>
+                <groupId>org.jacoco</groupId>
+                <artifactId>jacoco-maven-plugin</artifactId>
+                <version>${jacoco.version}</version>
+                <executions>
+                    <execution>
+                        <id>prepare-agent</id>
+                        <goals>
+                            <goal>prepare-agent</goal>
+                        </goals>
+                    </execution>
+                </executions>
+            </plugin>
+
+            <!--checkstyle plug-in. checking against googles styles
+               see config at checkstyle.xml
+            -->
+            <!--<plugin>-->
+            <!--<groupId>org.apache.maven.plugins</groupId>-->
+            <!--<artifactId>maven-checkstyle-plugin</artifactId>-->
+            <!--<version>2.17</version>-->
+            <!--<executions>-->
+            <!--<execution>-->
+            <!--<id>validate</id>-->
+            <!--<goals>-->
+            <!--<goal>check</goal>-->
+            <!--</goals>-->
+            <!--<phase>validate</phase>-->
+            <!--<configuration>-->
+            <!--<configLocation>checkstyle.xml</configLocation>-->
+            <!--<suppressionsLocation>checkstyle-suppressions.xml</suppressionsLocation>-->
+            <!--<encoding>UTF-8</encoding>-->
+            <!--<consoleOutput>false</consoleOutput>-->
+            <!--<failsOnError>false</failsOnError>-->
+            <!--<includeTestSourceDirectory>false</includeTestSourceDirectory>-->
+            <!--</configuration>-->
+            <!--</execution>-->
+            <!--</executions>-->
+            <!--</plugin>-->
+            <plugin>
+                <groupId>org.apache.maven.plugins</groupId>
+                <artifactId>maven-surefire-plugin</artifactId>
+                <version>2.19.1</version>
+                <dependencies>
+                    <dependency>
+                        <groupId>org.junit.platform</groupId>
+                        <artifactId>junit-platform-surefire-provider</artifactId>
+                        <version>${junit-platform.version}</version>
+                    </dependency>
+                </dependencies>
+                <configuration>
+                    <argLine>${argLine}</argLine>
+                </configuration>
+            </plugin>
+            <plugin>
+                <groupId>org.apache.maven.plugins</groupId>
+                <artifactId>maven-pmd-plugin</artifactId>
+                <version>3.6</version>
+                <configuration>
+                    <!-- After migration mark this true-->
+                    <failOnViolation>false</failOnViolation>
+                    <failurePriority>5</failurePriority>
+                    <printFailingErrors>true</printFailingErrors>
+                </configuration>
+                <executions>
+                    <execution>
+                        <goals>
+                            <goal>check</goal>
+                        </goals>
+                        <configuration>
+                            <excludeFromFailureFile>exclude-pmd.properties</excludeFromFailureFile>
+                        </configuration>
+                    </execution>
+                </executions>
+            </plugin>
+
+            <plugin>
+                <groupId>com.mycila</groupId>
+                <artifactId>license-maven-plugin</artifactId>
+                <version>2.11</version>
+                <configuration>
+                    <header>com/mycila/maven/plugin/license/templates/MIT.txt</header>
+                    <properties>
+                        <owner>Anshul Mohil</owner>
+                        <year>2018</year>
+                    </properties>
+                    <skipExistingHeaders>false</skipExistingHeaders>
+                </configuration>
+                <executions>
+                    <execution>
+                        <id>install-format</id>
+                        <phase>install</phase>
+                        <goals>
+                            <goal>format</goal>
+                        </goals>
+                    </execution>
+                </executions>
+            </plugin>
+        </plugins>
+
     </build>
 
     <reporting>
