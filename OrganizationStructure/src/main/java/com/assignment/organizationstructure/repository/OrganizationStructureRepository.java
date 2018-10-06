@@ -24,10 +24,30 @@ package com.assignment.organizationstructure.repository;
 
 import com.assignment.organizationstructure.model.EmployeeResource;
 import org.springframework.data.jpa.repository.JpaRepository;
+import org.springframework.data.jpa.repository.Query;
 import org.springframework.stereotype.Repository;
+
+import java.util.List;
 
 @Repository("organizationStructureRepository")
 public interface OrganizationStructureRepository extends JpaRepository<EmployeeResource, Long> {
 
+  @SuppressWarnings("unchecked")
+  EmployeeResource save(EmployeeResource employeeResource);
 
+  EmployeeResource findByEmpId(Long employeeId);
+
+  @Query(value = "SELECT b.first_name, COUNT(*) AS Number_of_suborinates FROM organization_Employee e "
+      + "JOIN organization_Employee b ON b.emp_id=e.manager_ID GROUP BY b.emp_id, b.first_name "
+      + "ORDER BY Number_of_suborinates DESC LIMIT 1", nativeQuery = true)
+  String getMaxSubordinateEmployee();
+
+
+  @Query(value = "SELECT SUM(e.SALARY) FROM organization_Employee e "
+      + "JOIN organization_Employee b ON b.Emp_ID=e.manager_ID AND b.Emp_ID = ?1", nativeQuery = true)
+  Long totalSalary(Long employeeId);
+
+  @Query(value = "SELECT e.first_name as empName, b.first_name as ManagerName  FROM organization_Employee e JOIN organization_Employee b "
+      + "ON b.Emp_ID=e.manager_ID GROUP BY b.Emp_ID, b.first_name,e.EMP_ID", nativeQuery = true)
+  List<Object[]> printOrganizationStructure();
 }
