@@ -41,6 +41,7 @@ public class Test {
     List<String> names =
         Arrays.asList("Geek", "GeeksQuiz", "g1", "QA", "Geek2");
 
+
     // declare the predicate type as string and use
     // lambda expression to create object
     //Predicate<String> p = (s)->s.startsWith("G");
